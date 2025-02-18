@@ -1,0 +1,11 @@
+{
+  "name": "portfolio_v2",
+  "version": "1.0.0",
+  "description": "Owens personal portfolio package",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "owenmy",
+  "license": "ISC"
+}
