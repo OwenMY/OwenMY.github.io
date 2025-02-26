@@ -1,5 +1,6 @@
 import NavBar from './components/Navbar.tsx';
 import Container from "@mui/material/Container";
+import Landing from "./sections/Landing"
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
       backgroundImage: "radial-gradient(50% 50% at top center, rgba(0, 0, 0, .66), #262626), linear-gradient(180deg, #fff, #262626)",
       height: "100vh"
     }}>
-      <NavBar/>
+      <NavBar />
+      <Landing />
     </Container>
   )
 }

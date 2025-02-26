@@ -9,12 +9,7 @@ const sections = ["About", "Work", "Contact"];
 
 const Navbar = () => {
   return (
-    <AppBar
-      position="sticky"
-      sx={{
-        backgroundColor: "#111"
-      }}
-    >
+    <AppBar position="sticky" sx={{ backgroundColor: "#111"}}>
       <Toolbar>
         <Typography variant="h6" sx={{fontWeight: "bolder", fontStyle: "italic", fontFamily: 'monospace'}}>
           Owen Yoshishige
