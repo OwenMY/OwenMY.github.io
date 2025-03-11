@@ -29,16 +29,16 @@ const Navbar = () => {
         <Typography variant="h6" sx={{fontWeight: "bolder", fontStyle: "italic", fontFamily: 'monospace'}}>
           Owen Yoshishige
         </Typography>
-        <Box sx={{ display: { md: 'flex' } }}>
+        <Box sx={{ display: { md: 'flex' }, "@media (max-width:750px)": {display: "none"} }}>
           {sections.map(section =>
-            <Button key={section} sx={{ my: 2, color: theme.palette.primary.main }}>{
+            <Button key={section} sx={{ my: 2, color: "white" }}>{
               section
             }</Button>
           )}
         </Box>
         <Box sx={{display: "flex" }}>
           <IconButton>
-            <TranslateIcon />
+            <TranslateIcon sx={{color: "white"}}/>
           </IconButton>
           <Switch
             checked={mode !== "light"}
