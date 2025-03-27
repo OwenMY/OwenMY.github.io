@@ -3,12 +3,12 @@ import Typography from "@mui/material/Typography";
 
 const Heading = () => (
   <Box sx={{width: "50%", paddingLeft: "7rem"}}>
-    <Typography variant="h3" sx={{fontWeight: "bolder"}}>About Me</Typography>
+    <Typography variant="h3" sx={{fontWeight: "bold", borderBottom: "1px white"}}>About Me</Typography>
   </Box>
 );
 
 const Description = () => {
-  const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet eros a justo aliquet rutrum. Pellentesque congue ultrices ullamcorper. Pellentesque placerat eleifend dignissim. Aliquam erat volutpat. Sed vel lorem a enim maximus consectetur. Cras laoreet, purus ac pharetra aliquet, dui nibh lobortis leo, sed ultrices massa justo non ipsum. Maecenas interdum pellentesque mauris, sed euismod mi suscipit at."
+  const description = "I am a front-end engineer with two years of experience, where I contributed to multiple projects, working across the stack to build scalable applications. My expertise includes React, TypeScript, and AWS services like Lambda and CloudFormation. I enjoy solving complex technical challenges, especially when it comes to automation and optimizing workflows. Currently I am looking for a new role where I can bring those skills and interests and also continue to hone in my craft."
 
   return (
     <Box sx={{width: "50%", paddingRight: "7rem"}}>
@@ -21,8 +21,8 @@ const About = () => {
     <Box sx={{
       display: "flex",
       width: "100vw",
-      height: "80vh",
-      margin: "auto"
+      margin: "auto",
+      height: "30vh"
     }}>
       <Heading />
       <Description />
