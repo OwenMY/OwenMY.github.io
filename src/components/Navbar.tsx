@@ -11,8 +11,7 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import IconButton from '@mui/material/IconButton';
 import { useColorScheme, useTheme } from '@mui/material/styles';
 
-// Old background color "#111" '#edeee8'
-const sections = ["About", "Work", "Contact"];
+const sections = ["Home", "About", "Work", "Contact"];
 
 const Navbar = () => {
   const theme = useTheme();
@@ -24,12 +23,18 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: theme.palette.primary.dark}}>
-      <Toolbar sx={{display: "flex", justifyContent: "space-between"}}>
+    <AppBar position="sticky" sx={{
+      backgroundColor: theme.palette.primary.dark,
+      padding: "0 7rem",
+      "@media (max-width:850px)": {
+        padding: "0 2rem"
+      }
+    }}>
+      <Toolbar sx={{display: "flex", justifyContent: "space-between"}} disableGutters>
         <Typography variant="h6" sx={{fontWeight: "bolder", fontStyle: "italic", fontFamily: 'monospace'}}>
           Owen Yoshishige
         </Typography>
-        <Box sx={{ display: { md: 'flex' }, "@media (max-width:750px)": {display: "none"} }}>
+        <Box sx={{ display: { md: 'flex' }, "@media (max-width:900px)": {display: "none"} }}>
           {sections.map(section =>
             <Button key={section} sx={{ my: 2, color: "white" }}>{
               section

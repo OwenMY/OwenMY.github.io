@@ -1,17 +1,18 @@
 import NavBar from './components/Navbar.tsx';
-import Container from "@mui/material/Container";
-import Landing from "./sections/Landing"
+import Box from "@mui/material/Box";
+import Landing from "./sections/Landing";
+import About from "./sections/About";
 
 function App() {
   return (
-    <Container disableGutters maxWidth="100vw" sx={{
-      position: "fixed",
-      height: "100vh",
+    <Box maxWidth="100vw" sx={{
+      height: "90vh",
       backgroundColor: "background.default"
     }}>
       <NavBar />
       <Landing />
-    </Container>
+      <About />
+    </Box>
   )
 }
 
