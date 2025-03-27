@@ -2,7 +2,8 @@ import NavBar from './components/Navbar.tsx';
 import Box from "@mui/material/Box";
 import Landing from "./sections/Landing";
 import About from "./sections/About";
-import Skills from "./sections/Skills.tsx"
+import Skills from "./sections/Skills.tsx";
+import Portfolio from "./sections/Portfolio.tsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Landing />
       <About />
       <Skills />
+      <Portfolio />
     </Box>
   )
 }

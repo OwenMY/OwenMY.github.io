@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 
 const Heading = () => (
   <Box sx={{width: "50%", paddingLeft: "7rem"}}>
-    <Typography variant="h3" sx={{fontWeight: "bold", borderBottom: "1px white"}}>About Me</Typography>
+    <Typography variant="h4" sx={{fontWeight: "bold"}}>About Me</Typography>
   </Box>
 );
 

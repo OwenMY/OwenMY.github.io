@@ -8,7 +8,7 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
 
-const sections = ["Home", "About", "Work", "Contact"];
+const sections = ["Home", "About", "Portfolio", "Contact"];
 
 const Navbar = () => {
   const theme = useTheme();
