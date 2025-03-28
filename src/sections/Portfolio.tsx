@@ -51,8 +51,7 @@ const Portfolio = () => {
       display: "flex",
       flexDirection: "column",
       width: "100vw",
-      margin: "auto",
-      height: "30vh"
+      margin: "auto"
     }}>
       <Heading />
       <Projects />

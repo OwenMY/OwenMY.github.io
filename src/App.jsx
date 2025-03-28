@@ -4,6 +4,7 @@ import Landing from "./sections/Landing";
 import About from "./sections/About";
 import Skills from "./sections/Skills.tsx";
 import Portfolio from "./sections/Portfolio.tsx";
+import Contact from "./sections/Contact.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
+      <Contact />
     </Box>
   )
 }
