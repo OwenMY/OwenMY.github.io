@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Skills from "./sections/Skills.tsx";
 import Portfolio from "./sections/Portfolio.tsx";
 import Contact from "./sections/Contact.tsx";
+import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Skills />
       <Portfolio />
       <Contact />
+      <ScrollToTopButton />
     </Box>
   )
 }

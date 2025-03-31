@@ -75,7 +75,7 @@ const HeroImage = () => (
 );
 
 const Landing = () => (
-  <Box id="Home"  sx={{
+  <Box id="Home" sx={{
     display: "flex",
     flexDirection: "row",
     gap: "1rem",
