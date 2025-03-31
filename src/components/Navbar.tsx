@@ -1,17 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import AppBar from "@mui/material/AppBar";
 import Typography from '@mui/material/Typography';
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import TranslateIcon from '@mui/icons-material/Translate';
-import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
+import LanguageMenu from "../components/LanguageMenu";
 
 const sections = ["Home", "About", "Portfolio", "Contact"];
 
 const Navbar = () => {
   const theme = useTheme();
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const section = e.currentTarget.textContent || "";
+
+    const header: HTMLElement | null = document.getElementById(section);
+    header?.scrollIntoView({behavior: "smooth"});
+  };
 
   return (
     <AppBar position="sticky" sx={{
@@ -27,14 +33,12 @@ const Navbar = () => {
         </Typography>
         <Box sx={{ display: { md: 'flex' }, "@media (max-width:900px)": {display: "none"} }}>
           {sections.map(section =>
-            <Button key={section} sx={{ my: 2, color: "white" }}>{
+            <Button onClick={handleClick} key={section} sx={{ my: 2, color: "white" }}>{
               section
             }</Button>
           )}
         </Box>
-        <IconButton>
-          <TranslateIcon sx={{color: "white"}}/>
-        </IconButton>
+        <LanguageMenu />
       </Toolbar>
     </AppBar>
   );

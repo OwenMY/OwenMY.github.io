@@ -5,7 +5,7 @@ import dudeMarine from "../assets/dudeMarine.png";
 import dudeMachinist from "../assets/dudeMachinist.png";
 
 const Heading = () => (
-  <Box sx={{width: "100%", paddingLeft: "7rem"}}>
+  <Box id="About"  sx={{width: "100%", paddingLeft: "7rem"}}>
     <Typography variant="h4" sx={{fontWeight: "bold"}}>About Me</Typography>
   </Box>
 );
@@ -54,7 +54,7 @@ const MilitaryPicture = () => (
 );
 
 const MachinistPicture = () => (
-  <Box sx={{width: "50%", "@media (max-width:850px)": {display: "none"}}}>
+  <Box sx={{width: "50%", margin: "0 auto", "@media (max-width:850px)": {display: "none"}}}>
       <Box sx={{width: "20rem", margin: "auto"}}>
         <img src={dudeMachinist} style={{ width: '100%', height: 'auto' }}/>
       </Box>

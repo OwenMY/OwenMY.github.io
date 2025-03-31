@@ -7,7 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 
 const Heading = () => (
-  <Box sx={{width: "100%%", margin: "auto"}}>
+  <Box id="Portfolio" sx={{width: "100%%", margin: "auto"}}>
     <Typography variant="h3" sx={{fontWeight: "bold"}}>Portfolio</Typography>
   </Box>
 );

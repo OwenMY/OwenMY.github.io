@@ -66,7 +66,7 @@ const Description = () => (
   </Box>
 );
 
-const Picture = () => (
+const HeroImage = () => (
   <Box sx={{width: "50%", margin: "auto", "@media (max-width:850px)": {display: "none"}}}>
       <Box sx={{width: "30rem", margin: "auto", paddingRight: "5rem"}}>
         <img src={hero} style={{ width: '100%', height: 'auto', borderRadius: "50%" }}/>
@@ -75,14 +75,14 @@ const Picture = () => (
 );
 
 const Landing = () => (
-  <Box sx={{
+  <Box id="Home"  sx={{
     display: "flex",
     flexDirection: "row",
     gap: "1rem",
     height: "100vh"
   }}>
     <Description/>
-    <Picture />
+    <HeroImage />
   </Box>
 );
 
