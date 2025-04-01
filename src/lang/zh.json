@@ -2,5 +2,9 @@
   "about.work.description": "我是一名前端工程师，有两年的工作经验，期间参与了多个项目，跨越技术栈构建可扩展的应用程序。我擅长使用 React、TypeScript，以及像 Lambda 和 CloudFormation 这样的 AWS 服务。我热衷于解决复杂的技术难题，尤其是在自动化和优化工作流程方面。目前，我正在寻找一个新的职位，既能发挥我的技能和兴趣，也能继续精进我的专业能力。",
   "about.heading.label": "关于我",
   "about.military.description": "我也是一名曾服役五年的海军陆战队老兵，担任眼镜蛇和休伊直升机的机械师。我有幸加入了一个世界级中队，该中队曾被评为海军陆战队最佳中队，还打破了当时休伊飞行最远距离的世界纪录。我在服役期间获得的技能和经验赋予了我在恶劣环境中成功所需的韧性和能力。有趣的是，我19岁时就已经在签署飞机维修记录了。",
-  "about.machinist.description": "在成为软件工程师之前，我是一名EDM专家。不是说音乐，而是电火花加工技师，专门使用G&M代码编程机器，制作可以把一根头发分成三段的精密零件（那是真的非常非常小）。在疫情期间，我有幸制作了新冠测试套件零件的模具，这对整个美国产生了深远的影响。"
+  "about.machinist.description": "在成为软件工程师之前，我是一名EDM专家。不是说音乐，而是电火花加工技师，专门使用G&M代码编程机器，制作可以把一根头发分成三段的精密零件（那是真的非常非常小）。在疫情期间，我有幸制作了新冠测试套件零件的模具，这对整个美国产生了深远的影响。",
+  "landing.occupation.heading": "全栈开发者",
+  "landing.fullname.heading": "欧文·吉重",
+  "landing.short.description": "我有2年经验，专注于React、TypeScript、Java和AWS服务。",
+  "landing.resume.button.description": "简历"
 }

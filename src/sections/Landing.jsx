@@ -6,12 +6,18 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Resume from "../assets/Resume.pdf"
 import Typography from "@mui/material/Typography";
 import hero from "../assets/hero.png";
+import {FormattedMessage} from "react-intl";
 
 const Resources = () => (
   <Box sx={{display: "flex", gap: "0.5rem", marginTop: "1rem"}}>
     <a href={Resume} target="_blank">
       <Button variant="outlined" sx={{color: "white"}}>
-        Resume <DownloadIcon />
+        <FormattedMessage
+          id="landing.resume.button.description"
+          defaultMessage="Resume"
+          description="label for a button for a resume"
+        />
+        <DownloadIcon />
       </Button>
     </a>
     <a href="https://github.com/OwenMY" target="_blank">
@@ -40,7 +46,11 @@ const Description = () => (
             fontSize: "1.5rem"
           },
         }}>
-          Full-Stack Developer
+          <FormattedMessage
+            id="landing.occupation.heading"
+            defaultMessage="Full-Stack Developer"
+            description="A heading label detailing that person is a Full-Stack Developer"
+          />
       </Typography>
       <Typography
         variant="h3"
@@ -52,14 +62,22 @@ const Description = () => (
             fontSize: "2rem"
           },
         }}>
-          Owen Yoshishige
+          <FormattedMessage
+            id="landing.fullname.heading"
+            defaultMessage="Owen Yoshishige"
+            description="A heading label detailing my name"
+          />
       </Typography>
       <Typography
         color='#edeee8'
         sx={{
           fontFamily: 'monospace',
         }}>
-          With 2 years of experience, I specialize in React, TypeScript, Java and AWS Services.
+           <FormattedMessage
+            id="landing.short.description"
+            defaultMessage="With 2 years of experience, I specialize in React, TypeScript, Java and AWS Services."
+            description="a short description of my background"
+          />
       </Typography>
       <Resources />
     </Box>
