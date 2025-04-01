@@ -7,8 +7,9 @@ import TranslateIcon from '@mui/icons-material/Translate';
 
 const languageOptions = [
   "English",
-  "Japanese",
-  "Chinese",
+  "日本語", // Japanese
+  "中文", // Chinese
+  "Espaniol",
   "Samuel L Jackson"
 ];
 
@@ -40,10 +41,6 @@ const LanguageButton = () => {
         onClick={handleClick}
       >
         <TranslateIcon sx={{color: "white"}}/>
-        <ListItemText
-          sx={{color: "white"}}
-          primary={languageOptions[selectedIndex]}
-        />
       </Button>
       <Menu
         id="basic-menu"
