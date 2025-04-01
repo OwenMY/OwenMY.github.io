@@ -7,42 +7,51 @@ import {FormattedMessage} from "react-intl";
 
 const Heading = () => (
   <Box sx={{width: "100%", paddingLeft: "7rem"}}>
-    <Typography variant="h4" sx={{fontWeight: "bold"}}>About Me</Typography>
+    <Typography variant="h4" sx={{fontWeight: "bold"}}>
+      <FormattedMessage
+        id="about.heading.label"
+        defaultMessage="About Me"
+        description="Label for an about section"
+      />
+    </Typography>
   </Box>
 );
 
-const Description = () => {
-  const description = (
-    <FormattedMessage
-      id="about.work.description"
-      defaultMessage="I am a front-end engineer with two years of experience, where I contributed to multiple projects, working across the stack to build scalable applications. My expertise includes React, TypeScript, and AWS services like Lambda and CloudFormation. I enjoy solving complex technical challenges, especially when it comes to automation and optimizing workflows. Currently I am looking for a new role where I can bring those skills and interests and also continue to hone in my craft."
-      description="Text describing my background experience"
+const Description = () => (
+  <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
+    <Typography>
+      <FormattedMessage
+        id="about.work.description"
+        defaultMessage="I am a front-end engineer with two years of experience, where I contributed to multiple projects, working across the stack to build scalable applications. My expertise includes React, TypeScript, and AWS services like Lambda and CloudFormation. I enjoy solving complex technical challenges, especially when it comes to automation and optimizing workflows. Currently I am looking for a new role where I can bring those skills and interests and also continue to hone in my craft."
+        description="Text describing my work experience"
     />
-  );
+    </Typography>
+  </Box>
+);
 
-  return (
-    <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
-      <Typography>{description}</Typography>
-    </Box>
-)};
+const MilitaryDescription = () => (
+  <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
+    <Typography>
+      <FormattedMessage
+        id="about.military.description"
+        defaultMessage="I am also a Marine Corps veteran who served five years as cobra and huey mechanic. I had the luxury to be apart of a world class squadron who was named Best Squadron of the Marine Corps and whom has also broke the world record for the furthest a huey has every flown at the time. The skills and experiences I have gained through my service have given me the resilience and aptitude needed to succeeded in harsh environments. Fun fact, I was signing off aircraft at 19 years old."
+        description="Text describing my military experience"
+    />
+    </Typography>
+  </Box>
+);
 
-const MilitaryDescription = () => {
-  const description = "I am also a Marine Corps veteran who served five years as cobra and huey mechanic. I had the luxury to be apart of a world class squadron who was named Best Squadron of the Marine Corps and whom has also broke the world record for the furthest a huey has every flown at the time. The skills and experiences I have gained through my service have given me the resilience and aptitude needed to succeeded in harsh environments. Fun fact, I was signing off aircraft at 19 years old."
-
-  return (
-    <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
-      <Typography>{description}</Typography>
-    </Box>
-)};
-
-const MachinistDescription = () => {
-  const description = "Prior to becoming a software engineer, I was an EDM specialist. Not the music, but an Electrical Discharge Machinist who specialized in programing machines using G&M code to create intricate precision parts with accuracy of splitting a hair into 3 pieces (That is VERY small). I had the oppurtunity of a lifetime to create the molds for the Covid 19 test kit parts during the pandemic which had large scale impact throughout the U.S."
-
-  return (
-    <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
-      <Typography>{description}</Typography>
-    </Box>
-)};
+const MachinistDescription = () => (
+  <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
+    <Typography>
+      <FormattedMessage
+        id="about.machinist.description"
+        defaultMessage="Prior to becoming a software engineer, I was an EDM specialist. Not the music, but an Electrical Discharge Machinist who specialized in programing machines using G&M code to create intricate precision parts with accuracy of splitting a hair into 3 pieces (That is VERY small). I had the oppurtunity of a lifetime to create the molds for the Covid 19 test kit parts during the pandemic which had large scale impact throughout the U.S."
+        description="Text describing my machining experience"
+    />
+    </Typography>
+  </Box>
+);
 
 const Picture = () => (
   <Box sx={{width: "50%", margin: "0 auto", "@media (max-width:850px)": {display: "none", width: "100%"}}}>
