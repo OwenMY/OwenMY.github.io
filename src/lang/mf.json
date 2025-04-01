@@ -6,5 +6,10 @@
   "landing.occupation.heading": "Full-Stack Developer",
   "landing.fullname.heading": "Owen Yoshishige",
   "landing.short.description": "I've got 2 damn years under my belt, and I specialize in React, TypeScript, Java, and all that AWS magic, alright?",
-  "landing.resume.button.description": "Resume"
+  "landing.resume.button.description": "Resume",
+  "navbar.full-name.logo": "Owen Yoshishige",
+  "navbar.home.button.label": "Home",
+  "navbar.about.button.label": "About",
+  "navbar.portfolio.button.label": "Portfolio",
+  "navbar.contact.button.label": "Contact"
 }

@@ -6,5 +6,10 @@
    "landing.occupation.heading": "Desarrollador Full-Stack",
    "landing.fullname.heading": "Owen Yoshishige",
    "landing.short.description": "Con 2 años de experiencia, me especializo en React, TypeScript, Java y servicios de AWS.",
-   "landing.resume.button.description": "reanudar"
+   "landing.resume.button.description": "reanudar",
+   "navbar.full-name.logo": "Owen Yoshishige",
+   "navbar.home.button.label": "Inicio",
+   "navbar.about.button.label": "Acerca de",
+   "navbar.portfolio.button.label": "Portafolio",
+   "navbar.contact.button.label": "Contacto"
 }

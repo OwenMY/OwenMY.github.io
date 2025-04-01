@@ -6,5 +6,10 @@
   "landing.occupation.heading": "全栈开发者",
   "landing.fullname.heading": "欧文·吉重",
   "landing.short.description": "我有2年经验，专注于React、TypeScript、Java和AWS服务。",
-  "landing.resume.button.description": "简历"
+  "landing.resume.button.description": "简历",
+  "navbar.full-name.logo": "欧文·吉重",
+  "navbar.home.button.label": "首页",
+  "navbar.about.button.label": "关于",
+  "navbar.portfolio.button.label": "作品集",
+  "navbar.contact.button.label": "联系"
 }

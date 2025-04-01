@@ -6,5 +6,10 @@
   "landing.occupation.heading": "フルスタック開発者",
   "landing.fullname.heading": "オーエン・ヨシシゲ",
   "landing.short.description": "2年の経験があり、React、TypeScript、Java、そしてAWSサービスを専門としています。",
-  "landing.resume.button.description": "履歴書"
+  "landing.resume.button.description": "履歴書",
+  "navbar.full-name.logo": "オーエン・ヨシシゲ",
+  "navbar.home.button.label": "ホーム",
+  "navbar.about.button.label": "紹介",
+  "navbar.portfolio.button.label": "ポートフォリオ",
+  "navbar.contact.button.label": "お問い合わせ"
 }

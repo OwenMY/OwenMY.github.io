@@ -7,8 +7,30 @@ import Toolbar from "@mui/material/Toolbar";
 import { useTheme } from '@mui/material/styles';
 import LanguageMenu from "../components/LanguageMenu";
 import HideOnScroll from "./HideOnScroll";
+import {FormattedMessage} from "react-intl";
 
-const sections = ["Home", "About", "Portfolio", "Contact"];
+const sections = [
+  <FormattedMessage
+    id="navbar.home.button.label"
+    defaultMessage="Home"
+    description="label for a home section button"
+  />,
+  <FormattedMessage
+    id="navbar.about.button.label"
+    defaultMessage="About"
+    description="label for an about section button"
+  />,
+  <FormattedMessage
+    id="navbar.portfolio.button.label"
+    defaultMessage="Portfolio"
+    description="label for a portfolio section button"
+  />,
+  <FormattedMessage
+    id="navbar.portfolio.button.label"
+    defaultMessage="Contact"
+    description="label for a contact section button"
+  />
+];
 
 interface NavBarProps {
   handleLangChange: (locale: string) => void
@@ -35,11 +57,15 @@ const Navbar = ({handleLangChange}: NavBarProps) => {
       }}>
         <Toolbar sx={{display: "flex", justifyContent: "space-between"}} disableGutters>
           <Typography variant="h6" sx={{fontWeight: "bolder", fontStyle: "italic", fontFamily: 'monospace'}}>
-            Owen Yoshishige
+            <FormattedMessage
+              id="navbar.full-name.logo"
+              defaultMessage="Owen Yoshishige"
+              description="Full name that will be used as a label"
+            />
           </Typography>
           <Box sx={{ display: { md: 'flex' }, "@media (max-width:900px)": {display: "none"} }}>
             {sections.map(section =>
-              <Button onClick={handleClick} key={section} sx={{ my: 2, color: "white" }}>{
+              <Button onClick={handleClick} sx={{ my: 2, color: "white" }}>{
                 section
               }</Button>
             )}
