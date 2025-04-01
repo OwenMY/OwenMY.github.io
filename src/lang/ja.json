@@ -11,5 +11,6 @@
   "navbar.home.button.label": "ホーム",
   "navbar.about.button.label": "紹介",
   "navbar.portfolio.button.label": "ポートフォリオ",
-  "navbar.contact.button.label": "お問い合わせ"
+  "navbar.contact.button.label": "お問い合わせ",
+  "portolio.heading.label": "ポートフォリオ"
 }

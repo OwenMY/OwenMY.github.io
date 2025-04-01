@@ -8,6 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import LanguageMenu from "../components/LanguageMenu";
 import HideOnScroll from "./HideOnScroll";
 import {FormattedMessage} from "react-intl";
+import langToSection from "../utilities/langToSection";
 
 const sections = [
   <FormattedMessage
@@ -26,7 +27,7 @@ const sections = [
     description="label for a portfolio section button"
   />,
   <FormattedMessage
-    id="navbar.portfolio.button.label"
+    id="navbar.contact.button.label"
     defaultMessage="Contact"
     description="label for a contact section button"
   />
@@ -40,7 +41,8 @@ const Navbar = ({handleLangChange}: NavBarProps) => {
   const theme = useTheme();
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const section = e.currentTarget.textContent || "";
+    const text = e.currentTarget.textContent || "";
+    const section = langToSection[text];
 
     const header: HTMLElement | null = document.getElementById(section);
     header?.scrollIntoView({behavior: "smooth", block: "start"});

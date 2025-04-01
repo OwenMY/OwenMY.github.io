@@ -11,5 +11,6 @@
   "navbar.home.button.label": "首页",
   "navbar.about.button.label": "关于",
   "navbar.portfolio.button.label": "作品集",
-  "navbar.contact.button.label": "联系"
+  "navbar.contact.button.label": "联系",
+  "portolio.heading.label": "作品集"
 }

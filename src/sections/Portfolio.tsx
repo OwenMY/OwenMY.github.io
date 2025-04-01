@@ -5,10 +5,17 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
+import {FormattedMessage} from "react-intl";
 
 const Heading = () => (
   <Box sx={{width: "100%%", margin: "auto"}}>
-    <Typography variant="h3" sx={{fontWeight: "bold"}}>Portfolio</Typography>
+    <Typography variant="h3" sx={{fontWeight: "bold"}}>
+      <FormattedMessage
+        id="portolio.heading.label"
+        defaultMessage="Portfolio"
+        description="Label for an about section"
+      />
+    </Typography>
   </Box>
 );
 

@@ -11,5 +11,6 @@
    "navbar.home.button.label": "Inicio",
    "navbar.about.button.label": "Acerca de",
    "navbar.portfolio.button.label": "Portafolio",
-   "navbar.contact.button.label": "Contacto"
+   "navbar.contact.button.label": "Contacto",
+   "portolio.heading.label": "Portafolio"
 }
