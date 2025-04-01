@@ -68,7 +68,8 @@ const About = () => {
       display: "flex",
       flexDirection: "column",
       width: "100vw",
-      margin: "auto"
+      margin: "auto",
+      paddingTop: "1rem"
     }}>
       <Heading />
       <Box sx={{display: "flex", width: "100%", paddingLeft: "5rem", marginBottom: "1rem"}}>

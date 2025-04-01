@@ -52,7 +52,7 @@ const Portfolio = () => {
       flexDirection: "column",
       width: "100vw",
       margin: "auto",
-      padding: "1rem 0",
+      paddingTop: "1rem",
     }}>
       <Heading />
       <Projects />
