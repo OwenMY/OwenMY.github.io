@@ -10,7 +10,11 @@ import HideOnScroll from "./HideOnScroll";
 
 const sections = ["Home", "About", "Portfolio", "Contact"];
 
-const Navbar = () => {
+interface NavBarProps {
+  handleLangChange: (locale: string) => void
+};
+
+const Navbar = ({handleLangChange}: NavBarProps) => {
   const theme = useTheme();
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -40,7 +44,7 @@ const Navbar = () => {
               }</Button>
             )}
           </Box>
-          <LanguageMenu />
+          <LanguageMenu handleLangChange={handleLangChange}/>
         </Toolbar>
       </AppBar>
     </HideOnScroll>

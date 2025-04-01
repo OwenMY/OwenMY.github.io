@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import TranslateIcon from '@mui/icons-material/Translate';
@@ -13,7 +12,19 @@ const languageOptions = [
   "Samuel L Jackson"
 ];
 
-const LanguageButton = () => {
+const languageCodes = {
+  "English": "en",
+  "日本語": "ja", // Japanese
+  "中文": "zh", // Chinese
+  "Espaniol": "es",
+  "Samuel L Jackson": "mf"
+}
+
+interface LanguageButtonProps {
+  handleLangChange: (locale: string) => void;
+}
+
+const LanguageButton = ({handleLangChange}: LanguageButtonProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -29,6 +40,7 @@ const LanguageButton = () => {
   const handleMenuItemClick = (_: React.MouseEvent<HTMLElement>, index: number) => {
     setAnchorEl(null);
     setSelectedIndex(index);
+    handleLangChange(languageCodes[languageOptions[index]]);
   };
 
   return (
