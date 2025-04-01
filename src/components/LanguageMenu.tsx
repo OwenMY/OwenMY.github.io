@@ -40,7 +40,9 @@ const LanguageButton = ({handleLangChange}: LanguageButtonProps) => {
   const handleMenuItemClick = (_: React.MouseEvent<HTMLElement>, index: number) => {
     setAnchorEl(null);
     setSelectedIndex(index);
-    handleLangChange(languageCodes[languageOptions[index]]);
+    const selectedLanguage = languageOptions[index];
+    const selectLocale = languageCodes[selectedLanguage];
+    handleLangChange(selectLocale);
   };
 
   return (

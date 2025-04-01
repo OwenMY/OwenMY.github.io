@@ -8,9 +8,15 @@ import Contact from "./sections/Contact.tsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
 import {IntlProvider} from 'react-intl'
 import React, { useState } from 'react';
-import LOCALES from './lang/Locales.ts';
+import {messages} from "./utilities/messages.ts";
 
-const messages = import("../src/lang/messages.json");
+const LOCALES = {
+  ENGLISH: "en",
+  JAPANESE: "ja",
+  CHINESE: "zh",
+  SPANISH: "es",
+  SAMUEL_L_JACKSON: "mf"
+}
 
 function App() {
   const locale = LOCALES.ENGLISH;

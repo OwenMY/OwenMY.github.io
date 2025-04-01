@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import dudeGivingMeetings from "../assets/dudeGivingMeetings.png";
 import dudeMarine from "../assets/dudeMarine.png";
 import dudeMachinist from "../assets/dudeMachinist.png";
+import {FormattedMessage} from "react-intl";
 
 const Heading = () => (
   <Box sx={{width: "100%", paddingLeft: "7rem"}}>
@@ -11,7 +12,13 @@ const Heading = () => (
 );
 
 const Description = () => {
-  const description = "I am a front-end engineer with two years of experience, where I contributed to multiple projects, working across the stack to build scalable applications. My expertise includes React, TypeScript, and AWS services like Lambda and CloudFormation. I enjoy solving complex technical challenges, especially when it comes to automation and optimizing workflows. Currently I am looking for a new role where I can bring those skills and interests and also continue to hone in my craft."
+  const description = (
+    <FormattedMessage
+      id="about.work.description"
+      defaultMessage="I am a front-end engineer with two years of experience, where I contributed to multiple projects, working across the stack to build scalable applications. My expertise includes React, TypeScript, and AWS services like Lambda and CloudFormation. I enjoy solving complex technical challenges, especially when it comes to automation and optimizing workflows. Currently I am looking for a new role where I can bring those skills and interests and also continue to hone in my craft."
+      description="Text describing my background experience"
+    />
+  );
 
   return (
     <Box sx={{width: "50%", margin: "0 auto", padding: "2rem"}}>
