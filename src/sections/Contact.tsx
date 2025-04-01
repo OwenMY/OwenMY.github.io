@@ -8,7 +8,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
 const Heading = () => (
-  <Box id="Contact"  sx={{width: "100%%", margin: "auto"}}>
+  <Box sx={{width: "100%%", margin: "auto"}}>
     <Typography variant="h3" sx={{fontWeight: "bold"}}>Contact</Typography>
   </Box>
 );
@@ -43,7 +43,7 @@ const ContactForm = () => (
 
 const Contact = () => {
   return (
-    <Box sx={{ width: "100vw", margin: "auto", paddingBottom: "3rem" }}>
+    <Box id="Contact"  sx={{ width: "100vw", margin: "auto", padding: "1rem 0 3rem 0" }}>
       <Box sx={{ display: "flex", flexDirection: "column", margin: "auto", maxWidth: "35rem", gap: "1rem"}}>
         <Heading />
         <Picture />

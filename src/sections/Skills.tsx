@@ -11,41 +11,38 @@ const Heading = () => (
 );
 
 const skills = [
-  ["React"],
-  ["Typescript"],
-  ["Java"],
-  ["Javascript"],
-  ["CSS"],
-  ["HTML"],
-  ["Express"],
-  ["Node.js"],
-  ["Jest"],
-  ["Cypress"],
-  ["Testing Library"],
-  ["Puppeteer"],
-  ["Styled-Components"],
-  ["AWS"],
-  ["Cloud Formation"],
-  ["Cloud Watch"],
-  ["Lambda"],
-  ["ECS"],
-  ["Fargate"],
-  ["S3"],
-  ["DynamoDB"],
-  ["Git"],
-  ["CI/CD"],
-  ["Postman"],
-  ["VSCode"],
-  ["Webpack"],
-  ["Rollup"],
+  "React",
+  "Typescript",
+  "Java",
+  "Javascript",
+  "CSS",
+  "HTML",
+  "Express",
+  "Node.js",
+  "Jest",
+  "Cypress",
+  "Testing Library",
+  "Puppeteer",
+  "Styled-Components",
+  "AWS",
+  "Cloud Formation",
+  "Cloud Watch",
+  "Lambda",
+  "ECS",
+  "Fargate",
+  "S3",
+  "DynamoDB",
+  "Git",
+  "CI/CD",
+  "Postman",
+  "VSCode",
+  "Webpack",
+  "Rollup",
 ];
 
 const ListOfSkills = () => (
     <Box sx={{ display: "flex", height: "5rem", padding: "2rem", flexWrap: "wrap", width: "50%", gap: "0.5rem"}}>
-      {skills.map((skill) => {
-        const [label] = skill;
-        return <Chip key={label} label={label}/>
-      })}
+      {skills.map((skill) => <Chip key={skill} label={skill}/> )}
     </Box>
 );
 
@@ -67,7 +64,7 @@ const Skills = () => {
       marginBottom: "5rem"
     }}>
       <Heading />
-      <Box sx={{display: "flex", marginLeft: "7rem"}}>
+      <Box sx={{display: "flex", marginLeft: "5rem"}}>
         <ListOfSkills />
         <SkillsPicture />
       </Box>

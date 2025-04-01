@@ -5,7 +5,7 @@ import dudeMarine from "../assets/dudeMarine.png";
 import dudeMachinist from "../assets/dudeMachinist.png";
 
 const Heading = () => (
-  <Box id="About"  sx={{width: "100%", paddingLeft: "7rem"}}>
+  <Box sx={{width: "100%", paddingLeft: "7rem"}}>
     <Typography variant="h4" sx={{fontWeight: "bold"}}>About Me</Typography>
   </Box>
 );
@@ -38,7 +38,7 @@ const MachinistDescription = () => {
 )};
 
 const Picture = () => (
-  <Box sx={{width: "50%", margin: "0 auto", "@media (max-width:850px)": {display: "none"}}}>
+  <Box sx={{width: "50%", margin: "0 auto", "@media (max-width:850px)": {display: "none", width: "100%"}}}>
       <Box sx={{width: "20rem", margin: "auto"}}>
         <img src={dudeGivingMeetings} style={{ width: '100%', height: 'auto' }}/>
       </Box>
@@ -64,23 +64,22 @@ const MachinistPicture = () => (
 
 const About = () => {
   return (
-    <Box sx={{
+    <Box id="About" sx={{
       display: "flex",
       flexDirection: "column",
       width: "100vw",
-      margin: "auto",
-      // height: "30vh"
+      margin: "auto"
     }}>
       <Heading />
-      <Box sx={{display: "flex", width: "100%", paddingLeft: "7rem", marginBottom: "1rem"}}>
+      <Box sx={{display: "flex", width: "100%", paddingLeft: "5rem", marginBottom: "1rem"}}>
         <Description />
         <Picture />
       </Box>
-      <Box sx={{display: "flex", width: "100%", paddingRight: "7rem", marginBottom: "1rem"}}>
+      <Box sx={{display: "flex", width: "100%", paddingRight: "5rem", marginBottom: "1rem"}}>
       <MachinistPicture />
         <MachinistDescription />
       </Box>
-      <Box sx={{display: "flex", width: "100%", paddingLeft: "7rem", marginBottom: "1rem"}}>
+      <Box sx={{display: "flex", width: "100%", paddingLeft: "5rem", marginBottom: "1rem"}}>
         <MilitaryDescription />
         <MilitaryPicture />
       </Box>
