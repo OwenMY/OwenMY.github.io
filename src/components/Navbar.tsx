@@ -54,7 +54,7 @@ const Navbar = ({handleLangChange}: NavBarProps) => {
         backgroundColor: theme.palette.primary.dark,
         padding: "0 7rem",
         "@media (max-width:850px)": {
-          padding: "0 2rem"
+          padding: "0 3rem"
         }
       }}>
         <Toolbar sx={{display: "flex", justifyContent: "space-between"}} disableGutters>
