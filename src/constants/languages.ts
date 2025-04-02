@@ -1,5 +1,5 @@
 
-const langToSection = {
+export const LANG_TO_SECTION = {
   "About": "About",
   "Acerca de": "About",
   "紹介": "About",
@@ -18,4 +18,10 @@ const langToSection = {
   "首页": "Home"
 };
 
-export default langToSection;
+export const LOCALES = {
+  ENGLISH: "en",
+  JAPANESE: "ja",
+  CHINESE: "zh",
+  SPANISH: "es",
+  SAMUEL_L_JACKSON: "mf"
+};

@@ -8,7 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import LanguageMenu from "../components/LanguageMenu";
 import HideOnScroll from "./HideOnScroll";
 import {FormattedMessage} from "react-intl";
-import langToSection from "../utilities/langToSection";
+import {LANG_TO_SECTION} from "../constants/languages";
 
 const sections = [
   <FormattedMessage
@@ -42,7 +42,7 @@ const Navbar = ({handleLangChange}: NavBarProps) => {
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const text = e.currentTarget.textContent || "";
-    const section = langToSection[text];
+    const section = LANG_TO_SECTION[text];
 
     const header: HTMLElement | null = document.getElementById(section);
     header?.scrollIntoView({behavior: "smooth", block: "start"});
