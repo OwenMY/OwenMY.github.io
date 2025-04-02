@@ -35,58 +35,56 @@ const Resources = () => (
 
 const Description = () => (
   <Box sx={{width: "50%", margin: "auto", '@media (max-width:850px)': {width: "100%"}}}>
-    <Box sx={{width: "100%", paddingLeft: "7rem", '@media (max-width:850px)': {paddingLeft: "2rem"}}}>
-      <Typography
-        variant="h5"
-        color='#edeee8'
-        sx={{
-          fontStyle: "italic",
-          fontFamily: 'monospace',
-          '@media (max-width:750px)': {
-            fontSize: "1.5rem"
-          },
-        }}>
+    <Typography
+      variant="h5"
+      color='#edeee8'
+      sx={{
+        fontStyle: "italic",
+        fontFamily: 'monospace',
+        '@media (max-width:750px)': {
+          fontSize: "1.5rem"
+        },
+      }}>
+        <FormattedMessage
+          id="landing.occupation.heading"
+          defaultMessage="Full-Stack Developer"
+          description="A heading label detailing that person is a Full-Stack Developer"
+        />
+    </Typography>
+    <Typography
+      variant="h3"
+      color='#edeee8'
+      sx={{
+        fontWeight: "bolder",
+        fontFamily: 'monospace',
+        '@media (max-width:750px)': {
+          fontSize: "2rem"
+        },
+      }}>
+        <FormattedMessage
+          id="landing.fullname.heading"
+          defaultMessage="Owen Yoshishige"
+          description="A heading label detailing my name"
+        />
+    </Typography>
+    <Typography
+      color='#edeee8'
+      sx={{
+        fontFamily: 'monospace',
+      }}>
           <FormattedMessage
-            id="landing.occupation.heading"
-            defaultMessage="Full-Stack Developer"
-            description="A heading label detailing that person is a Full-Stack Developer"
-          />
-      </Typography>
-      <Typography
-        variant="h3"
-        color='#edeee8'
-        sx={{
-          fontWeight: "bolder",
-          fontFamily: 'monospace',
-          '@media (max-width:750px)': {
-            fontSize: "2rem"
-          },
-        }}>
-          <FormattedMessage
-            id="landing.fullname.heading"
-            defaultMessage="Owen Yoshishige"
-            description="A heading label detailing my name"
-          />
-      </Typography>
-      <Typography
-        color='#edeee8'
-        sx={{
-          fontFamily: 'monospace',
-        }}>
-           <FormattedMessage
-            id="landing.short.description"
-            defaultMessage="With 2 years of experience, I specialize in React, TypeScript, Java and AWS Services."
-            description="a short description of my background"
-          />
-      </Typography>
-      <Resources />
-    </Box>
+          id="landing.short.description"
+          defaultMessage="With 2 years of experience, I specialize in React, TypeScript, Java and AWS Services."
+          description="a short description of my background"
+        />
+    </Typography>
+    <Resources />
   </Box>
 );
 
 const HeroImage = () => (
   <Box sx={{width: "50%", margin: "auto", "@media (max-width:850px)": {display: "none"}}}>
-      <Box sx={{width: "30rem", margin: "auto", paddingRight: "5rem"}}>
+      <Box sx={{width: "25rem", margin: "auto"}}>
         <img src={hero} style={{ width: '100%', height: 'auto', borderRadius: "50%" }}/>
       </Box>
   </Box>
@@ -97,7 +95,13 @@ const Landing = () => (
     display: "flex",
     flexDirection: "row",
     gap: "1rem",
-    height: "100vh"
+    height: "100vh",
+    padding: "7rem",
+    "@media (max-width:850px)": {
+      height: "90vh",
+      padding: "3rem",
+      width: "100%"
+    }
   }}>
     <Description/>
     <HeroImage />
