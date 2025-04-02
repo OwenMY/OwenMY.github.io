@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import dudeInfinite from "../assets/dudeInfinite.png";
 
 const Heading = () => (
-  <Box sx={{width: "50%", paddingLeft: "7rem"}}>
+  <Box>
     <Typography variant="h4" sx={{fontWeight: "bold"}}>Skills</Typography>
   </Box>
 );
@@ -42,7 +42,16 @@ const skills = [
 ];
 
 const ListOfSkills = () => (
-    <Box sx={{ display: "flex", height: "5rem", padding: "2rem", flexWrap: "wrap", width: "50%", gap: "0.5rem"}}>
+    <Box sx={{
+      display: "flex",
+      flexWrap: "wrap",
+      alignContent: "flex-start",
+      width: "50%",
+      gap: "0.5rem",
+      "@media (max-width:850px)": {
+        width: "100%"
+      }
+    }}>
       {skills.map((skill) => <Chip key={skill} label={skill}/> )}
     </Box>
 );
@@ -62,10 +71,14 @@ const Skills = () => {
       flexDirection: "column",
       width: "100vw",
       margin: "auto",
-      marginBottom: "5rem"
+      padding: "0 7rem",
+      gap: "1rem",
+      "@media (max-width:850px)": {
+        padding: "3rem"
+      }
     }}>
       <Heading />
-      <Box sx={{display: "flex", marginLeft: "5rem"}}>
+      <Box sx={{display: "flex", width: "100%"}}>
         <ListOfSkills />
         <SkillsPicture />
       </Box>
