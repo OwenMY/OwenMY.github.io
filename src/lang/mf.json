@@ -12,5 +12,12 @@
   "navbar.about.button.label": "About",
   "navbar.portfolio.button.label": "Portfolio",
   "navbar.contact.button.label": "Contact",
-  "portolio.heading.label": "Portfolio"
+  "portolio.heading.label": "Portfolio",
+  "contact.heading.label": "Contact",
+  "contact.calltoaction.description": "If you wanna hire me or team up on a business idea, just use that damn form below and hit me up. I can't wait to hear what you got, alright? Let's make something happen!",
+  "contact.input.firstname.label": "FirstName, motherf***er!",
+  "contact.input.lastname.label": "LastName, you know!",
+  "contact.input.email.label": "Yo, put your damn email!",
+  "contact.input.message.label": "Message, goddammit!",
+  "contact.submit.button.label": "SEND IT, NOW!"
 }

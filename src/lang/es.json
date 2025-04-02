@@ -12,5 +12,12 @@
    "navbar.about.button.label": "Acerca de",
    "navbar.portfolio.button.label": "Portafolio",
    "navbar.contact.button.label": "Contacto",
-   "portolio.heading.label": "Portafolio"
+   "portolio.heading.label": "Portafolio",
+   "contact.heading.label": "Contacto",
+   "contact.calltoaction.description": "Si estás interesado en contratarme o quieres colaborar en una idea de negocio, envíame un mensaje usando el formulario de abajo. ¡Estoy deseando saber de ti!",
+   "contact.input.firstname.label": "Nombre",
+   "contact.input.lastname.label": "Apellido",
+   "contact.input.email.label": "Correo electrónico",
+   "contact.input.message.label": "Mensaje",
+   "contact.submit.button.label": "Enviar"
 }

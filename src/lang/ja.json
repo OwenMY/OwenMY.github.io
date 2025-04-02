@@ -12,5 +12,12 @@
   "navbar.about.button.label": "紹介",
   "navbar.portfolio.button.label": "ポートフォリオ",
   "navbar.contact.button.label": "お問い合わせ",
-  "portolio.heading.label": "ポートフォリオ"
+  "portolio.heading.label": "ポートフォリオ",
+  "contact.heading.label": "お問い合わせ",
+  "contact.calltoaction.description": "私を雇うことに興味がある方、またはビジネスアイデアでコラボレーションしたい方は、以下のフォームからメッセージを送ってください。ご連絡を楽しみにしています！",
+  "contact.input.firstname.label": "名前",
+  "contact.input.lastname.label": "苗字",
+  "contact.input.email.label": "メール",
+  "contact.input.message.label": "メッセージ",
+  "contact.submit.button.label": "送信"
 }

@@ -12,5 +12,12 @@
   "navbar.about.button.label": "关于",
   "navbar.portfolio.button.label": "作品集",
   "navbar.contact.button.label": "联系",
-  "portolio.heading.label": "作品集"
+  "portolio.heading.label": "作品集",
+  "contact.heading.label": "联系",
+  "contact.calltoaction.description": "如果你有兴趣雇用我，或想在商业点子上合作，请通过下方的表单发送消息给我。我期待你的来信",
+  "contact.input.firstname.label": "名前",
+  "contact.input.lastname.label": "苗字",
+  "contact.input.email.label": "电子邮件",
+  "contact.input.message.label": "メッセージ",
+  "contact.submit.button.label": "送信"
 }
