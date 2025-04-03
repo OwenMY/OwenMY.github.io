@@ -63,7 +63,7 @@ const About = () => {
     <Box id="About" sx={{
       display: "flex",
       flexDirection: "column",
-      width: "100vw",
+      width: "100%",
       margin: "auto",
       padding: "1rem 7rem 0 7rem",
       gap: "1rem",

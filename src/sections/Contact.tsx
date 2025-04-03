@@ -106,7 +106,7 @@ const ContactForm = () => (
 
 const Contact = () => {
   return (
-    <Box id="Contact"  sx={{ width: "100vw", margin: "auto", padding: "1rem 0 3rem 0" }}>
+    <Box id="Contact"  sx={{ width: "100%", margin: "auto", padding: "1rem 0 3rem 0" }}>
       <Box sx={{ display: "flex", flexDirection: "column", margin: "auto", maxWidth: "35rem", gap: "1rem"}}>
         <Heading />
         <Picture />

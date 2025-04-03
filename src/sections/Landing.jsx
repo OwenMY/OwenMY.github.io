@@ -95,7 +95,8 @@ const Landing = () => (
     display: "flex",
     flexDirection: "row",
     gap: "1rem",
-    height: "100vh",
+    height: "100%",
+    margin: "auto",
     padding: "7rem",
     "@media (max-width:850px)": {
       height: "90vh",

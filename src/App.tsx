@@ -20,7 +20,7 @@ function App() {
   return (
     <IntlProvider messages={messages[currentLocale]} locale={currentLocale} defaultLocale="en">
       <Box maxWidth="100vw" sx={{
-        height: "90vh",
+        height: "100vh",
         backgroundColor: "background.default"
       }}>
         <NavBar handleLangChange={handleLangChange} />

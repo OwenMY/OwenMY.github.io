@@ -69,7 +69,7 @@ const Skills = () => {
     <Box sx={{
       display: "flex",
       flexDirection: "column",
-      width: "100vw",
+      width: "100%",
       margin: "auto",
       padding: "0 7rem",
       gap: "1rem",
