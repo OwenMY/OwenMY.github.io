@@ -66,8 +66,8 @@ const Navbar = ({handleLangChange}: NavBarProps) => {
             />
           </Typography>
           <Box sx={{ display: { md: 'flex' }, "@media (max-width:900px)": {display: "none"} }}>
-            {sections.map(section =>
-              <Button onClick={handleClick} sx={{ my: 2, color: "white" }}>{
+            {sections.map((section, index) =>
+              <Button key={index} onClick={handleClick} sx={{ my: 2, color: "white" }}>{
                 section
               }</Button>
             )}

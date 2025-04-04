@@ -74,7 +74,7 @@ const Description = () => (
       }}>
           <FormattedMessage
           id="landing.short.description"
-          defaultMessage="With 2 years of experience, I specialize in React, TypeScript, Java and AWS Services."
+          defaultMessage="With 2 years of experience working for Amazon Web Services, I specialize in React, TypeScript, Java and AWS Services."
           description="a short description of my background"
         />
     </Typography>
