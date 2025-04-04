@@ -2,11 +2,10 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import thumbsUpGuy from "../assets/thumbsUpGuy.png";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import {FormattedMessage} from "react-intl";
+import { ContactForm } from "../components/ContactForm";
 
 const Heading = () => (
   <Box sx={{width: "100%%", margin: "auto"}}>
@@ -40,68 +39,6 @@ const CallToAction = () => (
       </Typography>
     </CardContent>
   </Card>
-);
-
-const ContactForm = () => (
-  <Box component="form" sx={{display: "flex", flexWrap: "wrap", gap: "1rem"}}>
-    <TextField
-      required
-      sx={{width: "17rem"}}
-      label={
-        <FormattedMessage
-          id="contact.input.firstname.label"
-          defaultMessage="FirstName"
-          description="Label indicating that your first name should be written in the input"
-        />
-      }
-      variant="outlined"
-    />
-    <TextField
-      required
-      sx={{width: "17rem"}}
-      label={
-        <FormattedMessage
-          id="contact.input.lastname.label"
-          defaultMessage="LastName"
-          description="Label indicating that your last name should be written in the input"
-        />
-      }
-      variant="outlined"
-    />
-    <TextField
-      required
-      sx={{width: "100%"}}
-      label={
-        <FormattedMessage
-          id="contact.input.email.label"
-          defaultMessage="Email"
-          description="Label indicating that your last name should be written in the input"
-        />
-      }
-      variant="outlined"
-    />
-    <TextField
-      required
-      sx={{width: "100%"}}
-      label={
-        <FormattedMessage
-          id="contact.input.message.label"
-          defaultMessage="Message"
-          description="Label indicating that your message should be written in the input"
-        />
-      }
-      multiline
-      minRows={4}
-      maxRows={4}
-    />
-    <Button variant="contained" sx={{width: "100%"}}>
-      <FormattedMessage
-        id="contact.submit.button.label"
-        defaultMessage="Send"
-        description="Label indicating that pressing the button will submit the form"
-      />
-    </Button>
-  </Box>
 );
 
 const Contact = () => {
