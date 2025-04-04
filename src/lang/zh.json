@@ -19,5 +19,13 @@
   "contact.input.lastname.label": "苗字",
   "contact.input.email.label": "电子邮件",
   "contact.input.message.label": "メッセージ",
-  "contact.submit.button.label": "送信"
+  "contact.submit.button.label": "送信",
+  "portfolio.atelier.description": "一个由4位工程师团队使用React和ExpressJS创建的服装店登陆页面",
+  "portfolio.atelier.title": "Atelier",
+  "portfolio.aztm.description": "一个使用亚利桑那州交通API的地图应用，用于在你旅行时定位道路上的施工瓶颈。该应用还包括道路的实时影像",
+  "portfolio.aztm.title": "亚利桑那交通地图",
+  "portfolio.gymx5000.description": "一个由工程师团队为客户创建的健身应用MVP。我们实施了多态数据库设计，以支持可扩展的类别添加，并优先开发核心功能以满足紧迫的截止日期。",
+  "portfolio.gymx5000.title": "GymX5000",
+  "portfolio.qanda.description": "用于Atelier商店的API，用于存储和读取问题与答案",
+  "portfolio.qanda.title": "问题与答案API"
 }

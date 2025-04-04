@@ -19,5 +19,13 @@
   "contact.input.lastname.label": "苗字",
   "contact.input.email.label": "メール",
   "contact.input.message.label": "メッセージ",
-  "contact.submit.button.label": "送信"
+  "contact.submit.button.label": "送信",
+  "portfolio.atelier.description": "ReactとExpressJSを使用して4人のエンジニアチームで作成した衣料品店のランディングページ",
+  "portfolio.atelier.title": "アトリエ",
+  "portfolio.aztm.description": "旅行中に道路上の工事によるボトルネックを特定するために、アリゾナ州の交通APIを使用した地図アプリ。アプリには道路のライブ映像も含まれています",
+  "portfolio.aztm.title": "アリゾナトラフィックマップ",
+  "portfolio.gymx5000.description": "クライアント向けにエンジニアチームが作成したジムアプリのMVP。スケーラブルなカテゴリ追加を可能にするため、ポリモーフィックなデータベース設計を実装し、厳しい納期に対応するためにコア機能を優先しました。",
+  "portfolio.gymx5000.title": "GymX5000",
+  "portfolio.qanda.description": "Atelierストア用に作成された質問と回答を保存および読み取るためのAPI",
+  "portfolio.qanda.title": "質問と回答API"
 }

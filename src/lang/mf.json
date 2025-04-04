@@ -19,5 +19,13 @@
   "contact.input.lastname.label": "LastName, you know!",
   "contact.input.email.label": "Yo, put your damn email!",
   "contact.input.message.label": "Message, goddammit!",
-  "contact.submit.button.label": "SEND IT, NOW!"
+  "contact.submit.button.label": "SEND IT, NOW!",
+  "portfolio.atelier.description": "A landing page for a clothing store? Damn right it’s built with React and ExpressJS by four bad*** engineers!",
+  "portfolio.atelier.title": "Atelier",
+  "portfolio.aztm.description": "A freakin' map app pulling live traffic jams straight from Arizona? Hell yeah, plus live road cams, baby!",
+  "portfolio.aztm.title": "Arizona Traffic Maps",
+  "portfolio.gymx5000.description": "A gym app MVP? Tight deadline? We crushed that polymorphic database design like pros, man!",
+  "portfolio.gymx5000.title": "GymX5000",
+  "portfolio.qanda.description": "An API to handle all your damn questions and answers for the Atelier store. No nonsense.",
+  "portfolio.qanda.title": "Questions and Answers API"
 }
