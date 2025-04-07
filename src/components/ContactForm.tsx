@@ -4,10 +4,8 @@ import Button  from "@mui/material/Button";
 import TextField from "@mui/material/TextField"
 import Box from "@mui/material/Box";
 import emailjs from "@emailjs/browser";
-
-emailjs.init({
-  publicKey: "1fjYNTMsrNIjh7aTa"
-});
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 interface FormValues {
   firstName: string;
@@ -64,6 +62,32 @@ const validateInput = (type: string, val: string): boolean => {
 export const ContactForm = () => {
   const [state, dispatch] = useReducer(reducer, INIT_FORM_VALS);
   const [inputError, setInputError] = useState(INIT_ERROR_STATE);
+  const [submitted, setSubmitted] = useState(false);
+  const [showToast, setShowToast] = useState<{isVisible: boolean, type: "success" | "error"}>({
+    isVisible: false,
+    type: "success"
+  });
+
+  const sendMessage = () => {
+    const full_name = `${state.firstName} ${state.lastName}`;
+
+    const email_template = {
+      subject: "Lets connect!",
+      name: full_name,
+      message: state.message,
+      email: state.email
+    };
+
+    const options = { publicKey: "1fjYNTMsrNIjh7aTa" };
+
+    emailjs
+      .send("service_5tqs43z", "template_fdhfkzi", email_template, options)
+      .then(() => {
+        setSubmitted(true);
+        setShowToast({isVisible: true, type: "success"});
+      })
+      .catch(() => setShowToast({isVisible: true, type: "error"}));
+  };
 
   const handleSubmission = () => {
     let allInputsValid = true;
@@ -77,8 +101,10 @@ export const ContactForm = () => {
       }
     }
 
-    if (allInputsValid) console.log("All are valid");
+    if (allInputsValid) sendMessage();
   }
+
+  const handleToastClose = () => setShowToast(prevState => ({...prevState, isVisible: false}));
 
   return (
     <Box component="form" sx={{display: "flex", flexWrap: "wrap", gap: "1rem"}}>
@@ -86,6 +112,7 @@ export const ContactForm = () => {
         required
         variant="outlined"
         error={inputError.firstName}
+        disabled={submitted}
         sx={{width: "17rem"}}
         onChange={(e) =>  dispatch({type: "firstName", val: e.target.value})}
         onBlur={() => setInputError({
@@ -104,6 +131,7 @@ export const ContactForm = () => {
         required
         error={inputError.lastName}
         sx={{width: "17rem"}}
+        disabled={submitted}
         onChange={(e) =>  dispatch({type: "lastName", val: e.target.value})}
         onBlur={() => setInputError({
           ...inputError,
@@ -122,6 +150,7 @@ export const ContactForm = () => {
         required
         error={inputError.email}
         sx={{width: "100%"}}
+        disabled={submitted}
         onChange={(e) => dispatch({type: "email", val: e.target.value})}
         onBlur={() => setInputError({
           ...inputError,
@@ -140,6 +169,7 @@ export const ContactForm = () => {
         required
         sx={{width: "100%"}}
         error={inputError.message}
+        disabled={submitted}
         onChange={(e) => dispatch({type: "message", val: e.target.value})}
         onBlur={() => setInputError({
           ...inputError,
@@ -157,12 +187,35 @@ export const ContactForm = () => {
         maxRows={4}
         slotProps={{htmlInput: {maxLength: 500}}}
       />
-      <Button onClick={handleSubmission} variant="contained" sx={{width: "100%"}}>
+      <Button disabled={submitted} onClick={handleSubmission} variant="contained" sx={{width: "100%"}}>
         <FormattedMessage
           id="contact.submit.button.label"
           defaultMessage="Send"
           description="Label indicating that pressing the button will submit the form"
         />
       </Button>
+      <Snackbar
+        open={showToast.isVisible}
+        autoHideDuration={5000}
+        onClose={handleToastClose}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleToastClose} severity={showToast.type} sx={{ width: '100%' }}>
+          {
+            showToast.type === "success" && <FormattedMessage
+              id="contact.submit.success.message"
+              defaultMessage="Message sent successfully! I'll be in touch shortly"
+              description="Alert message indicating the message was sent succesfully."
+            />
+          }
+          {
+            showToast.type === "error" && <FormattedMessage
+              id="contact.submit.error.message"
+              defaultMessage="Message failed to send, please try again later."
+              description="Alert message indicating the message failed to send."
+           />
+          }
+        </Alert>
+      </Snackbar>
     </Box>
 )};

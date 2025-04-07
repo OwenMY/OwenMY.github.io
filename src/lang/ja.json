@@ -20,6 +20,8 @@
   "contact.input.email.label": "メール",
   "contact.input.message.label": "メッセージ",
   "contact.submit.button.label": "送信",
+  "contact.submit.error.message": "メッセージの送信に失敗しました。後でもう一度お試しください。",
+  "contact.submit.success.message": "メッセージが正常に送信されました！すぐにご連絡いたします。",
   "portfolio.atelier.description": "ReactとExpressJSを使用して4人のエンジニアチームで作成した衣料品店のランディングページ",
   "portfolio.atelier.title": "アトリエ",
   "portfolio.aztm.description": "旅行中に道路上の工事によるボトルネックを特定するために、アリゾナ州の交通APIを使用した地図アプリ。アプリには道路のライブ映像も含まれています",

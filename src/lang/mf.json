@@ -20,6 +20,8 @@
   "contact.input.email.label": "Email",
   "contact.input.message.label": "Message",
   "contact.submit.button.label": "SEND IT",
+  "contact.submit.error.message": "Message didn't send. Try that **** again later.",
+  "contact.submit.success.message": "Hell yeah! Message sent! I'll hit you up real soon.",
   "portfolio.atelier.description": "A landing page for a clothing store? Damn right it’s built with React and ExpressJS by four bad*** engineers!",
   "portfolio.atelier.title": "Atelier",
   "portfolio.aztm.description": "A freakin' map app pulling live traffic jams straight from Arizona? Hell yeah, plus live road cams, baby!",

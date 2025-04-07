@@ -19,5 +19,15 @@
   "contact.input.lastname.label": "LastName",
   "contact.input.email.label": "Email",
   "contact.input.message.label": "Message",
-  "contact.submit.button.label": "Send"
+  "contact.submit.button.label": "Send",
+  "contact.submit.error.message": "Message failed to send, please try again later.",
+  "contact.submit.success.message": "Message sent successfully! I'll be in touch shortly",
+  "portfolio.atelier.description": "A landing page for a clothing store created using React and ExpressJS on a team of 4 engineers",
+  "portfolio.atelier.title": "Atelier",
+  "portfolio.aztm.description": "A map app using the State Of Arizonas traffic API for locating construction bottlenecks on the road when you travel. The app also includes live footage of the roads",
+  "portfolio.aztm.title": "Arizona Traffic Maps",
+  "portfolio.gymx5000.description": "A gym app MVP a team of engineers created for a client. We implemented a polymorphic database design to allow scalable category additions and prioritized core features to meet a tight deadline.",
+  "portfolio.gymx5000.title": "GymX5000",
+  "portfolio.qanda.description": "An API used for the Atelier store for storing and reading questions and answers",
+  "portfolio.qanda.title": "Questions and Answers API"
 }

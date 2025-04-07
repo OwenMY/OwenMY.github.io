@@ -20,6 +20,8 @@
    "contact.input.email.label": "Correo electrónico",
    "contact.input.message.label": "Mensaje",
    "contact.submit.button.label": "Enviar",
+   "contact.submit.error.message": "El mensaje no se pudo enviar, por favor intenta de nuevo más tarde.",
+   "contact.submit.success.message": "¡Mensaje enviado con éxito! Me pondré en contacto contigo en breve.",
    "portfolio.atelier.description": "Una página de aterrizaje para una tienda de ropa creada usando React y ExpressJS en un equipo de 4 ingenieros",
    "portfolio.atelier.title": "Atelier",
    "portfolio.aztm.description": "Una aplicación de mapas que utiliza la API de tráfico del Estado de Arizona para localizar cuellos de botella en la carretera durante tus viajes. La aplicación también incluye imágenes en vivo de las carreteras",
