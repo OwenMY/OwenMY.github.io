@@ -75,7 +75,10 @@ const Skills = () => {
       gap: "1rem",
       "@media (max-width:850px)": {
         padding: "3rem"
-      }
+      },
+      "@media (min-width:850px)": {
+        maxWidth: "90rem"
+      },
     }}>
       <Heading />
       <Box sx={{display: "flex", width: "100%"}}>

@@ -57,7 +57,9 @@ const Navbar = ({handleLangChange}: NavBarProps) => {
           padding: "0 3rem"
         }
       }}>
-        <Toolbar sx={{display: "flex", justifyContent: "space-between"}} disableGutters>
+        <Toolbar sx={{display: "flex", justifyContent: "space-between", "@media (min-width:1450px)": {
+          margin: "auto", minWidth: "76rem"
+        }}} disableGutters>
           <Typography variant="h6" sx={{fontWeight: "bolder", fontStyle: "italic", fontFamily: 'monospace'}}>
             <FormattedMessage
               id="navbar.full-name.logo"

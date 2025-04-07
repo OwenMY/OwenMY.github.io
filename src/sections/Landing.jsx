@@ -102,7 +102,10 @@ const Landing = () => (
       height: "90vh",
       padding: "3rem",
       width: "100%"
-    }
+    },
+    "@media (min-width:850px)": {
+      maxWidth: "90rem"
+    },
   }}>
     <Description/>
     <HeroImage />
