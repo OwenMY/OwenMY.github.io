@@ -113,7 +113,7 @@ export const ContactForm = () => {
         variant="outlined"
         error={inputError.firstName}
         disabled={submitted}
-        sx={{width: "17rem"}}
+        sx={{width: "100%", "@media (min-width:850px)": {width: "17rem"}}}
         onChange={(e) =>  dispatch({type: "firstName", val: e.target.value})}
         onBlur={() => setInputError({
           ...inputError,
@@ -130,7 +130,7 @@ export const ContactForm = () => {
       <TextField
         required
         error={inputError.lastName}
-        sx={{width: "17rem"}}
+        sx={{width: "100%", "@media (min-width:850px)": {width: "17rem"}}}
         disabled={submitted}
         onChange={(e) =>  dispatch({type: "lastName", val: e.target.value})}
         onBlur={() => setInputError({

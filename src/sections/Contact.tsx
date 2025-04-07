@@ -28,14 +28,14 @@ const Picture = () => (
 );
 
 const CallToAction = () => (
-  <Card sx={{ width: "100%", borderRadius: "1rem" }}>
+  <Card sx={{ borderRadius: "1rem" }}>
     <CardContent sx={{margin: "auto"}}>
       <Typography variant="overline" sx={{lineHeight: "0.5rem"}}>
-      <FormattedMessage
-        id="contact.calltoaction.description"
-        defaultMessage="If you are interested in hiring me or want to collaberate on a business idea, send me a message using the form below. I am looking forward to hearing from you!"
-        description="a call to action for make people want to contact you"
-      />
+        <FormattedMessage
+          id="contact.calltoaction.description"
+          defaultMessage="If you are interested in hiring me or want to collaberate on a business idea, send me a message using the form below. I am looking forward to hearing from you!"
+          description="a call to action for make people want to contact you"
+        />
       </Typography>
     </CardContent>
   </Card>
@@ -43,8 +43,15 @@ const CallToAction = () => (
 
 const Contact = () => {
   return (
-    <Box id="Contact"  sx={{ width: "100%", margin: "auto", padding: "1rem 0 3rem 0" }}>
-      <Box sx={{ display: "flex", flexDirection: "column", margin: "auto", maxWidth: "35rem", gap: "1rem"}}>
+    <Box id="Contact"  sx={{ width: "100%", margin: "auto", padding: "2rem" }}>
+      <Box sx={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "auto",
+        maxWidth: "35rem",
+        "@media (min-width:850px)": {maxWidth: "35rem"},
+        gap: "1rem"
+      }}>
         <Heading />
         <Picture />
         <CallToAction />
