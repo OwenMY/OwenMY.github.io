@@ -74,3 +74,9 @@ export const AZ_TRAFFIC_MAPS_DESCRIPTION = (
     description="Text describing what happened during a project called Arizona Traffic Maps"
   />
 );
+
+// Project Skills
+export const GYMX5000_SKILLS = ["React", "MUI", "Express", "Postgres"];
+export const ATELIER_SKILLS = ["React", "HTML", "CSS", "Styled-components"];
+export const QUESTIONS_AND_ANSWERS_SKILLS = ["Node", "Express", "AWS", "Nginx", "Postgres"];
+export const AZ_TRAFFIC_MAPS_SKILLS = ["React", "Express", "Google Maps API", "MongoDB"];

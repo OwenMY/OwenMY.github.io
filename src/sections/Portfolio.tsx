@@ -16,15 +16,20 @@ import {
   AZ_TRAFFIC_MAPS_URL,
   GYMX_5000_DESCRIPTION,
   GYMX5000_URL,
+  GYMX5000_SKILLS,
   ATELIER_DESCRITION,
   ATELIER_URL,
+  ATELIER_SKILLS,
   QUESTIONS_AND_ANSWERS_DESCRIPTION,
   QUESTIONS_AND_ANSWERS_URL,
+  QUESTIONS_AND_ANSWERS_SKILLS,
   AZ_TRAFFIC_MAPS_TITLE,
+  AZ_TRAFFIC_MAPS_SKILLS,
   GYMX_5000_TITLE,
   ATELIER_TITLE,
   QUESTIONS_AND_ANSWERS_TITLE
 } from "../constants/projects";
+import Chip from "@mui/material/Chip";
 
 const Heading = () => (
   <Box sx={{margin: "auto", paddingBottom: "2rem"}}>
@@ -49,25 +54,31 @@ interface ProjectProps {
   description: React.JSX.Element,
   picture: string,
   github_link: string,
+  skills: string[],
   deployed_link?: string
 };
 
-const Project = ({title, description, picture, github_link, deployed_link}: ProjectProps) => (
+const Project = ({title, description, picture, github_link, deployed_link, skills}: ProjectProps) => (
   <Card sx={{
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    width: "18rem",
-    height: "25rem",
+    width: "19rem",
+    height: "30rem",
     borderRadius: "1rem",
     "@media (max-width:850px)": {
         margin: "auto"
     }
   }}>
-    <CardContent>
-      <Picture src={picture}/>
-      <Typography variant="h6" component="h6">{title}</Typography>
-      <Typography variant="body2">{description}</Typography>
+    <CardContent sx={{display: "flex", height: "35rem", flexDirection: "column", justifyContent: "space-between", paddingBottom: "0"}}>
+      <Box>
+        <Picture src={picture}/>
+        <Typography variant="h6" component="h6">{title}</Typography>
+        <Typography variant="body2">{description}</Typography>
+      </Box>
+      <Box sx={{display: "flex", gap: "0.5rem", flexWrap:  "wrap", alignSelf: "flex-start" }}>
+        {skills.map(skill => <Chip key={skill} label={skill} />)}
+      </Box>
     </CardContent>
     <CardActions sx={{display: "flex", justifyContent: "space-between"}}>
       <Link href={github_link} target="_blank" sx={{padding: "0.5rem"}}>
@@ -101,24 +112,28 @@ const Portfolio = () => {
           description={AZ_TRAFFIC_MAPS_DESCRIPTION}
           picture={AZ_TRAFFIC_MAPS_PIC}
           github_link={AZ_TRAFFIC_MAPS_URL}
+          skills={AZ_TRAFFIC_MAPS_SKILLS}
         />
         <Project
           title={GYMX_5000_TITLE}
           description={GYMX_5000_DESCRIPTION}
           picture={GYMX5000_PIX}
           github_link={GYMX5000_URL}
+          skills={GYMX5000_SKILLS}
         />
         <Project
           title={ATELIER_TITLE}
           description={ATELIER_DESCRITION}
           picture={ATELIER_PIC}
           github_link={ATELIER_URL}
+          skills={ATELIER_SKILLS}
         />
         <Project
           title={QUESTIONS_AND_ANSWERS_TITLE}
           description={QUESTIONS_AND_ANSWERS_DESCRIPTION}
           picture={QUESTIONS_AND_ANSWERS_PIC}
           github_link={QUESTIONS_AND_ANSWERS_URL}
+          skills={QUESTIONS_AND_ANSWERS_SKILLS}
         />
       </Box>
     </Box>
