@@ -1,8 +1,9 @@
 {
-  "name": "owenmy-github.io",
+  "name": "owenmy.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://owenmy.github.io/owenmy.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
