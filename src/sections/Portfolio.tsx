@@ -67,7 +67,8 @@ const Project = ({title, description, picture, github_link, deployed_link, skill
     height: "30rem",
     borderRadius: "1rem",
     "@media (max-width:850px)": {
-        margin: "auto"
+        margin: "auto",
+        width: "100%"
     }
   }}>
     <CardContent sx={{display: "flex", height: "35rem", flexDirection: "column", justifyContent: "space-between", paddingBottom: "0"}}>
