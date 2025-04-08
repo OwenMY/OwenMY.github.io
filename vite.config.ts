@@ -14,4 +14,5 @@ export default ({
             }
           ]],
       }})],
+      base: '/owenmy-github.io/',
 }) satisfies UserConfig;
