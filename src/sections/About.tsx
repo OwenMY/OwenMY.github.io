@@ -3,12 +3,12 @@ import Typography from "@mui/material/Typography";
 import dudeGivingMeetings from "../assets/dudeGivingMeetings.png";
 import dudeMarine from "../assets/dudeMarine.png";
 import dudeMachinist from "../assets/dudeMachinist.png";
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from "react-intl";
 import React from "react";
 
 const Heading = () => (
   <Box>
-    <Typography variant="h4" sx={{fontWeight: "bold"}}>
+    <Typography variant="h4" sx={{ fontWeight: "bold" }}>
       <FormattedMessage
         id="about.heading.label"
         defaultMessage="About Me"
@@ -42,49 +42,62 @@ const MILITARY_DESCRIPTION = (
   />
 );
 
-const Description = ({description}: {description: React.JSX.Element}) => (
-  <Box sx={{width: "50%", margin: "0 auto", "@media (max-width:850px)":{ width: "100%" }}}>
-    <Typography>
-      {description}
-    </Typography>
+const Description = ({ description }: { description: React.JSX.Element }) => (
+  <Box
+    sx={{
+      width: "50%",
+      margin: "0 auto",
+      "@media (max-width:850px)": { width: "100%" },
+    }}
+  >
+    <Typography>{description}</Typography>
   </Box>
 );
 
-const Picture = ({src}: {src: string}) => (
-  <Box sx={{width: "50%", margin: "0 auto", "@media (max-width:850px)": { display: "none" }}}>
-    <Box sx={{width: "20rem", margin: "auto"}}>
-      <img src={src} style={{ width: '100%', height: 'auto' }}/>
+const Picture = ({ src }: { src: string }) => (
+  <Box
+    sx={{
+      width: "50%",
+      margin: "0 auto",
+      "@media (max-width:850px)": { display: "none" },
+    }}
+  >
+    <Box sx={{ width: "20rem", margin: "auto" }}>
+      <img src={src} style={{ width: "100%", height: "auto" }} />
     </Box>
   </Box>
 );
 
 const About = () => {
   return (
-    <Box id="About" sx={{
-      display: "flex",
-      flexDirection: "column",
-      width: "100%",
-      margin: "auto",
-      padding: "1rem 7rem 0 7rem",
-      gap: "1rem",
-      "@media (max-width:850px)": {
-        padding: "3rem",
-      },
-      "@media (min-width:850px)": {
-        maxWidth: "90rem"
-      },
-    }}>
+    <Box
+      id="About"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        margin: "auto",
+        padding: "1rem 7rem 0 7rem",
+        gap: "1rem",
+        "@media (max-width:850px)": {
+          padding: "3rem",
+        },
+        "@media (min-width:850px)": {
+          maxWidth: "90rem",
+        },
+      }}
+    >
       <Heading />
-      <Box sx={{display: "flex"}}>
-        <Description description={SOFTWARE_DESCRIPTION}/>
-        <Picture src={dudeGivingMeetings}/>
+      <Box sx={{ display: "flex" }}>
+        <Description description={SOFTWARE_DESCRIPTION} />
+        <Picture src={dudeGivingMeetings} />
       </Box>
-      <Box sx={{display: "flex"}}>
-        <Picture src={dudeMachinist}/>
+      <Box sx={{ display: "flex" }}>
+        <Picture src={dudeMachinist} />
         <Description description={MACHINIST_DESCRIPTION} />
       </Box>
-      <Box sx={{display: "flex"}}>
-        <Description description={MILITARY_DESCRIPTION}/>
+      <Box sx={{ display: "flex" }}>
+        <Description description={MILITARY_DESCRIPTION} />
         <Picture src={dudeMarine} />
       </Box>
     </Box>

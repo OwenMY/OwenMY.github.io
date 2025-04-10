@@ -6,7 +6,9 @@ import dudeInfinite from "../assets/dudeInfinite.png";
 
 const Heading = () => (
   <Box>
-    <Typography variant="h4" sx={{fontWeight: "bold"}}>Skills</Typography>
+    <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+      Skills
+    </Typography>
   </Box>
 );
 
@@ -42,46 +44,52 @@ const skills = [
 ];
 
 const ListOfSkills = () => (
-    <Box sx={{
+  <Box
+    sx={{
       display: "flex",
       flexWrap: "wrap",
       alignContent: "flex-start",
       width: "50%",
       gap: "0.5rem",
       "@media (max-width:850px)": {
-        width: "100%"
-      }
-    }}>
-      {skills.map((skill) => <Chip key={skill} label={skill}/> )}
-    </Box>
+        width: "100%",
+      },
+    }}
+  >
+    {skills.map((skill) => (
+      <Chip key={skill} label={skill} />
+    ))}
+  </Box>
 );
 
 const SkillsPicture = () => (
-  <Box sx={{width: "50%", "@media (max-width:850px)": {display: "none"}}}>
-      <Box sx={{width: "20rem", margin: "auto"}}>
-        <img src={dudeInfinite} style={{ width: '100%', height: 'auto' }}/>
-      </Box>
+  <Box sx={{ width: "50%", "@media (max-width:850px)": { display: "none" } }}>
+    <Box sx={{ width: "20rem", margin: "auto" }}>
+      <img src={dudeInfinite} style={{ width: "100%", height: "auto" }} />
+    </Box>
   </Box>
 );
 
 const Skills = () => {
   return (
-    <Box sx={{
-      display: "flex",
-      flexDirection: "column",
-      width: "100%",
-      margin: "auto",
-      padding: "0 7rem",
-      gap: "1rem",
-      "@media (max-width:850px)": {
-        padding: "3rem"
-      },
-      "@media (min-width:850px)": {
-        maxWidth: "90rem"
-      },
-    }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        margin: "auto",
+        padding: "0 7rem",
+        gap: "1rem",
+        "@media (max-width:850px)": {
+          padding: "3rem",
+        },
+        "@media (min-width:850px)": {
+          maxWidth: "90rem",
+        },
+      }}
+    >
       <Heading />
-      <Box sx={{display: "flex", width: "100%"}}>
+      <Box sx={{ display: "flex", width: "100%" }}>
         <ListOfSkills />
         <SkillsPicture />
       </Box>

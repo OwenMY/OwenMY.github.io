@@ -4,12 +4,13 @@ import { FormattedMessage } from "react-intl";
 // Project URLs
 export const GYMX5000_URL = "https://github.com/OwenMY/GymX5000";
 export const ATELIER_URL = "https://github.com/OwenMY/Atelier";
-export const QUESTIONS_AND_ANSWERS_URL = "https://github.com/OwenMY/Questions-And-Answers-API";
-export const AZ_TRAFFIC_MAPS_URL = "https://github.com/OwenMY/Arizona-Traffic-Maps";
-
+export const QUESTIONS_AND_ANSWERS_URL =
+  "https://github.com/OwenMY/Questions-And-Answers-API";
+export const AZ_TRAFFIC_MAPS_URL =
+  "https://github.com/OwenMY/Arizona-Traffic-Maps";
 
 // Project Titles
-export const GYMX_5000_TITLE= (
+export const GYMX_5000_TITLE = (
   <FormattedMessage
     id="portfolio.gymx5000.title"
     defaultMessage="GymX5000"
@@ -17,7 +18,7 @@ export const GYMX_5000_TITLE= (
   />
 );
 
-export const ATELIER_TITLE= (
+export const ATELIER_TITLE = (
   <FormattedMessage
     id="portfolio.atelier.title"
     defaultMessage="Atelier"
@@ -25,7 +26,7 @@ export const ATELIER_TITLE= (
   />
 );
 
-export const QUESTIONS_AND_ANSWERS_TITLE= (
+export const QUESTIONS_AND_ANSWERS_TITLE = (
   <FormattedMessage
     id="portfolio.qanda.title"
     defaultMessage="Questions and Answers API"
@@ -33,14 +34,13 @@ export const QUESTIONS_AND_ANSWERS_TITLE= (
   />
 );
 
-export const AZ_TRAFFIC_MAPS_TITLE= (
+export const AZ_TRAFFIC_MAPS_TITLE = (
   <FormattedMessage
     id="portfolio.aztm.title"
     defaultMessage="Arizona Traffic Maps"
     description="Text describing the title of the project Arizona Traffic Maps"
   />
 );
-
 
 // Project Descriptions
 export const GYMX_5000_DESCRIPTION = (
@@ -78,5 +78,16 @@ export const AZ_TRAFFIC_MAPS_DESCRIPTION = (
 // Project Skills
 export const GYMX5000_SKILLS = ["React", "MUI", "Express", "Postgres"];
 export const ATELIER_SKILLS = ["React", "HTML", "CSS", "Styled-components"];
-export const QUESTIONS_AND_ANSWERS_SKILLS = ["Node", "Express", "AWS", "Nginx", "Postgres"];
-export const AZ_TRAFFIC_MAPS_SKILLS = ["React", "Express", "Google Maps API", "MongoDB"];
+export const QUESTIONS_AND_ANSWERS_SKILLS = [
+  "Node",
+  "Express",
+  "AWS",
+  "Nginx",
+  "Postgres",
+];
+export const AZ_TRAFFIC_MAPS_SKILLS = [
+  "React",
+  "Express",
+  "Google Maps API",
+  "MongoDB",
+];

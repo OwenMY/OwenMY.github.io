@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format:check": "prettier . -c",
+    "format:fix": "prettier . --write",
     "lint": "eslint .",
     "preview": "vite preview",
     "lang:extract": "formatjs extract 'src/**/*.ts*' --out-file lang/en.json && formatjs compile 'lang/en.json' --out-file lang/en.json",

@@ -2,29 +2,29 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import TranslateIcon from '@mui/icons-material/Translate';
+import TranslateIcon from "@mui/icons-material/Translate";
 
 const languageOptions = [
   "English",
   "日本語", // Japanese
   "中文", // Chinese
   "Espaniol",
-  "Samuel L Jackson"
+  "Samuel L Jackson",
 ];
 
 const languageCodes = {
-  "English": "en",
-  "日本語": "ja", // Japanese
-  "中文": "zh", // Chinese
-  "Espaniol": "es",
-  "Samuel L Jackson": "mf"
-}
+  English: "en",
+  日本語: "ja", // Japanese
+  中文: "zh", // Chinese
+  Espaniol: "es",
+  "Samuel L Jackson": "mf",
+};
 
 interface LanguageButtonProps {
   handleLangChange: (locale: string) => void;
 }
 
-const LanguageButton = ({handleLangChange}: LanguageButtonProps) => {
+const LanguageButton = ({ handleLangChange }: LanguageButtonProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -37,7 +37,10 @@ const LanguageButton = ({handleLangChange}: LanguageButtonProps) => {
     setAnchorEl(null);
   };
 
-  const handleMenuItemClick = (_: React.MouseEvent<HTMLElement>, index: number) => {
+  const handleMenuItemClick = (
+    _: React.MouseEvent<HTMLElement>,
+    index: number,
+  ) => {
     setAnchorEl(null);
     setSelectedIndex(index);
     const selectedLanguage = languageOptions[index];
@@ -49,12 +52,12 @@ const LanguageButton = ({handleLangChange}: LanguageButtonProps) => {
     <div>
       <Button
         id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <TranslateIcon sx={{color: "white"}}/>
+        <TranslateIcon sx={{ color: "white" }} />
       </Button>
       <Menu
         id="basic-menu"
@@ -62,7 +65,7 @@ const LanguageButton = ({handleLangChange}: LanguageButtonProps) => {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
         {languageOptions.map((option, index) => (
