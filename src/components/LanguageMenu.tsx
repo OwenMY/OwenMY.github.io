@@ -9,7 +9,6 @@ const languageOptions = [
   "日本語", // Japanese
   "中文", // Chinese
   "Espaniol",
-  "Samuel L Jackson",
 ];
 
 const languageCodes = {
@@ -17,7 +16,6 @@ const languageCodes = {
   日本語: "ja", // Japanese
   中文: "zh", // Chinese
   Espaniol: "es",
-  "Samuel L Jackson": "mf",
 };
 
 interface LanguageButtonProps {
