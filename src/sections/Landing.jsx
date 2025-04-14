@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -10,26 +11,44 @@ import { FormattedMessage } from "react-intl";
 
 const Resources = () => (
   <Box sx={{ display: "flex", gap: "0.5rem", marginTop: "1rem" }}>
-    <a href={Resume} target="_blank">
-      <Button variant="outlined" sx={{ color: "white" }}>
+    <Button variant="outlined">
+      <Link
+        href={Resume}
+        target="_blank"
+        underline="none"
+        color="textPrimary"
+        display="flex"
+      >
         <FormattedMessage
           id="landing.resume.button.description"
           defaultMessage="Resume"
           description="label for a button for a resume"
         />
         <DownloadIcon />
-      </Button>
-    </a>
-    <a href="https://github.com/OwenMY" target="_blank">
-      <Button variant="outlined" sx={{ color: "white" }}>
+      </Link>
+    </Button>
+    <Button variant="outlined">
+      <Link
+        href="https://github.com/OwenMY"
+        target="_blank"
+        underline="none"
+        color="textPrimary"
+        display="flex"
+      >
         <GitHubIcon />
-      </Button>
-    </a>
-    <a href="https://www.linkedin.com/in/owenyoshishige/" target="_blank">
-      <Button variant="outlined" sx={{ color: "white" }}>
+      </Link>
+    </Button>
+    <Button variant="outlined">
+      <Link
+        href="https://www.linkedin.com/in/owenyoshishige/"
+        target="_blank"
+        underline="none"
+        color="textPrimary"
+        display="flex"
+      >
         <LinkedInIcon />
-      </Button>
-    </a>
+      </Link>
+    </Button>
   </Box>
 );
 
@@ -43,7 +62,6 @@ const Description = () => (
   >
     <Typography
       variant="h5"
-      color="#edeee8"
       sx={{
         fontStyle: "italic",
         fontFamily: "monospace",
@@ -60,7 +78,6 @@ const Description = () => (
     </Typography>
     <Typography
       variant="h3"
-      color="#edeee8"
       sx={{
         fontWeight: "bolder",
         fontFamily: "monospace",
@@ -75,12 +92,7 @@ const Description = () => (
         description="A heading label detailing my name"
       />
     </Typography>
-    <Typography
-      color="#edeee8"
-      sx={{
-        fontFamily: "monospace",
-      }}
-    >
+    <Typography sx={{ fontFamily: "monospace" }}>
       <FormattedMessage
         id="landing.short.description"
         defaultMessage="With 2 years of experience working for Amazon Web Services, I specialize in React, TypeScript, Java and AWS Services."

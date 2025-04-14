@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import { useTheme } from "@mui/material/styles";
 import LanguageMenu from "../components/LanguageMenu";
 import HideOnScroll from "./HideOnScroll";
 import { FormattedMessage } from "react-intl";
@@ -38,8 +37,6 @@ interface NavBarProps {
 }
 
 const Navbar = ({ handleLangChange }: NavBarProps) => {
-  const theme = useTheme();
-
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const text = e.currentTarget.textContent || "";
     const section = LANG_TO_SECTION[text];
@@ -52,7 +49,6 @@ const Navbar = ({ handleLangChange }: NavBarProps) => {
     <HideOnScroll>
       <AppBar
         sx={{
-          backgroundColor: theme.palette.primary.dark,
           padding: "0 7rem",
           "@media (max-width:850px)": {
             padding: "0 3rem",

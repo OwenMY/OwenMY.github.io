@@ -110,15 +110,16 @@ const Project = ({
       </Box>
     </CardContent>
     <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-      <Link href={github_link} target="_blank" sx={{ padding: "0.5rem" }}>
-        <GitHubIcon sx={{ color: "white" }} />
+      <Link
+        color="textPrimary"
+        href={github_link}
+        target="_blank"
+        sx={{ padding: "0.5rem" }}
+      >
+        <GitHubIcon />
       </Link>
       {deployed_link && (
-        <Link
-          href={deployed_link}
-          target="_blank"
-          sx={{ color: "white", padding: "0.5rem" }}
-        >
+        <Link href={deployed_link} target="_blank" sx={{ padding: "0.5rem" }}>
           SEE LIVE
         </Link>
       )}
