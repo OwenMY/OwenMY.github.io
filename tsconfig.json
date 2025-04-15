@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    // Enables JSX syntax for React
+    "jsx": "react",
+
+    // Sets the module system to use ESNext (supports import.meta, top-level await, etc.)
+    "module": "esnext",
+
+    // Uses Node-style module resolution (how modules are located in node_modules)
+    "moduleResolution": "node",
+
+    // Sets the JavaScript language version to latest (e.g., ES2020+ features like optional chaining)
+    "target": "esnext",
+
+    // Includes the DOM and latest ES features for type checking and global APIs (like window, fetch, etc.)
+    "lib": ["dom", "esnext"],
+
+    // Pulls in Vite-specific types, including support for import.meta.env
+    "types": ["vite/client"],
+    "allowSyntheticDefaultImports": true
+  }
+}
