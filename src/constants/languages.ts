@@ -22,5 +22,4 @@ export const LOCALES = {
   JAPANESE: "ja",
   CHINESE: "zh",
   SPANISH: "es",
-  SAMUEL_L_JACKSON: "mf",
 };
