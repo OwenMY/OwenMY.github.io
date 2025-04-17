@@ -38,4 +38,5 @@ jobs:
       - name: Deploy to GitHub Pages
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-        run: npm run deploy
+        run: |
+          git remote set-url origin https://git:${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git && npm run deploy
