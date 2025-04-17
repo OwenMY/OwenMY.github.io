@@ -6,10 +6,11 @@ import Box from "@mui/material/Box";
 import emailjs from "@emailjs/browser";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-
-const PUBLIC_KEY = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
-const SERVICE_ID = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
-const TEMPLATED_ID = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
+import {
+  EMAIL_JS_PUBLIC_KEY,
+  EMAIL_JS_SERVICE_ID,
+  EMAIL_JS_TEMPLATE_ID,
+} from "../constants/keys";
 
 interface FormValues {
   firstName: string;
@@ -88,10 +89,10 @@ export const ContactForm = () => {
       email: state.email,
     };
 
-    const options = { publicKey: PUBLIC_KEY };
+    const options = { publicKey: EMAIL_JS_PUBLIC_KEY };
 
     emailjs
-      .send(SERVICE_ID, TEMPLATED_ID, email_template, options)
+      .send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, email_template, options)
       .then(() => {
         setSubmitted(true);
         setShowToast({ isVisible: true, type: "success" });
