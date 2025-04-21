@@ -11,21 +11,25 @@ import { LANG_TO_SECTION } from "../constants/languages";
 
 const sections = [
   <FormattedMessage
+    key="Home"
     id="navbar.home.button.label"
     defaultMessage="Home"
     description="label for a home section button"
   />,
   <FormattedMessage
+    key="About"
     id="navbar.about.button.label"
     defaultMessage="About"
     description="label for an about section button"
   />,
   <FormattedMessage
+    key="Portfolio"
     id="navbar.portfolio.button.label"
     defaultMessage="Portfolio"
     description="label for a portfolio section button"
   />,
   <FormattedMessage
+    key="Contact"
     id="navbar.contact.button.label"
     defaultMessage="Contact"
     description="label for a contact section button"

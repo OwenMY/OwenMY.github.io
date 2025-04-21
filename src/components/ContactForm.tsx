@@ -58,7 +58,7 @@ const INIT_ERROR_STATE = {
 };
 
 const validateInput = (type: string, val: string): boolean => {
-  const emailRegex = /^[\w-\.]+@([\w-]+)\.+[\w-]{2,}/;
+  const emailRegex = /^[\w-]+@([\w-]+)\.+[\w-]{2,}/;
   let isInvalid = false;
 
   if (val.length === 0) isInvalid = true;

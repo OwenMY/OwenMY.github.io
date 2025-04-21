@@ -29,6 +29,7 @@ import {
   QUESTIONS_AND_ANSWERS_TITLE,
 } from "../constants/projects";
 import Chip from "@mui/material/Chip";
+import { JSX } from "react";
 
 const Heading = () => (
   <Box sx={{ margin: "auto", paddingBottom: "2rem" }}>
@@ -49,8 +50,8 @@ const Picture = ({ src }: { src: string }) => (
 );
 
 interface ProjectProps {
-  title: React.JSX.Element;
-  description: React.JSX.Element;
+  title: JSX.Element;
+  description: JSX.Element;
   picture: string;
   github_link: string;
   skills: string[];
