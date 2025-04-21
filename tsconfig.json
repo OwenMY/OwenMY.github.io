@@ -16,7 +16,7 @@
     "lib": ["dom", "esnext"],
 
     // Pulls in Vite-specific types, including support for import.meta.env
-    "types": ["vite/client"],
+    "types": ["vite/client", "jest"],
     "allowSyntheticDefaultImports": true
   }
 }

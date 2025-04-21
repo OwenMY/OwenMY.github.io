@@ -6,7 +6,10 @@ export default {
   plugins: [
     react({
       babel: {
-        presets: [],
+        presets: [
+          ["@babel/preset-env", { targets: { node: "current" } }],
+          "@babel/preset-typescript",
+        ],
         // Your plugins run before any built-in transform (eg: Fast Refresh)
         plugins: [
           [

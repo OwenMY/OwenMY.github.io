@@ -43,5 +43,8 @@ export default [
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
     },
+    env: {
+      jest: true,
+    },
   },
 ];
