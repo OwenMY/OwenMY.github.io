@@ -1,13 +1,13 @@
 import NavBar from "./components/Navbar";
 import Box from "@mui/material/Box";
-import Landing from "./sections/Landing.jsx";
-import About from "./sections/About.jsx";
+import Landing from "./sections/Landing";
+import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Portfolio from "./sections/Portfolio";
 import Contact from "./sections/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { IntlProvider } from "react-intl";
-import React, { useState } from "react";
+import { useState } from "react";
 import { messages } from "./constants/messages";
 import { LOCALES } from "./constants/languages";
 

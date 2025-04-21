@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
 import Fade from "@mui/material/Fade";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import React from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const ScrollToTopButton = () => {

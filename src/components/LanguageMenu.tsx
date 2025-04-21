@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, MouseEvent } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -24,10 +24,10 @@ interface LanguageButtonProps {
 
 const LanguageButton = ({ handleLangChange }: LanguageButtonProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -35,10 +35,7 @@ const LanguageButton = ({ handleLangChange }: LanguageButtonProps) => {
     setAnchorEl(null);
   };
 
-  const handleMenuItemClick = (
-    _: React.MouseEvent<HTMLElement>,
-    index: number,
-  ) => {
+  const handleMenuItemClick = (_: MouseEvent<HTMLElement>, index: number) => {
     setAnchorEl(null);
     setSelectedIndex(index);
     const selectedLanguage = languageOptions[index];

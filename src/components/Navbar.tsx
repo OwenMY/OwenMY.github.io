@@ -1,4 +1,4 @@
-import React from "react";
+import { MouseEvent } from "react";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -37,7 +37,7 @@ interface NavBarProps {
 }
 
 const Navbar = ({ handleLangChange }: NavBarProps) => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     const text = e.currentTarget.textContent || "";
     const section = LANG_TO_SECTION[text];
 

@@ -4,7 +4,7 @@ import dudeGivingMeetings from "../assets/dudeGivingMeetings.png";
 import dudeMarine from "../assets/dudeMarine.png";
 import dudeMachinist from "../assets/dudeMachinist.png";
 import { FormattedMessage } from "react-intl";
-import React from "react";
+import { JSX } from "react";
 
 const Heading = () => (
   <Box>
@@ -42,7 +42,7 @@ const MILITARY_DESCRIPTION = (
   />
 );
 
-const Description = ({ description }: { description: React.JSX.Element }) => (
+const Description = ({ description }: { description: JSX.Element }) => (
   <Box
     sx={{
       width: "50%",

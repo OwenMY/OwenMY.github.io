@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";

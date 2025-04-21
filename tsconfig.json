@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Enables JSX syntax for React
-    "jsx": "react",
+    "jsx": "react-jsx",
 
     // Sets the module system to use ESNext (supports import.meta, top-level await, etc.)
     "module": "esnext",
