@@ -1,15 +1,15 @@
-import NavBar from "./components/Navbar.tsx";
+import NavBar from "./components/Navbar";
 import Box from "@mui/material/Box";
 import Landing from "./sections/Landing.jsx";
 import About from "./sections/About.jsx";
-import Skills from "./sections/Skills.tsx";
-import Portfolio from "./sections/Portfolio.tsx";
-import Contact from "./sections/Contact.tsx";
-import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
+import Skills from "./sections/Skills";
+import Portfolio from "./sections/Portfolio";
+import Contact from "./sections/Contact";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import { IntlProvider } from "react-intl";
 import React, { useState } from "react";
-import { messages } from "./constants/messages.ts";
-import { LOCALES } from "./constants/languages.ts";
+import { messages } from "./constants/messages";
+import { LOCALES } from "./constants/languages";
 
 function App() {
   const locale = LOCALES.ENGLISH;
