@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Resume from "../assets/Resume.pdf";
 import Typography from "@mui/material/Typography";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.webp";
 import { FormattedMessage } from "react-intl";
 
 const Resources = () => (

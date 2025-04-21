@@ -4,10 +4,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import { FormattedMessage } from "react-intl";
-import GYMX5000_PIX from "../assets/GymX5000.jpeg";
-import QUESTIONS_AND_ANSWERS_PIC from "../assets/API.jpeg";
+import GYMX5000_PIX from "../assets/GymX5000.webp";
+import QUESTIONS_AND_ANSWERS_PIC from "../assets/API.webp";
 import ATELIER_PIC from "../assets/Atelier.webp";
-import AZ_TRAFFIC_MAPS_PIC from "../assets/AZTM.jpeg";
+import AZ_TRAFFIC_MAPS_PIC from "../assets/AZTM.webp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
 import {

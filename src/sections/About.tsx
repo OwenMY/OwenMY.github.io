@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import dudeGivingMeetings from "../assets/dudeGivingMeetings.png";
-import dudeMarine from "../assets/dudeMarine.png";
-import dudeMachinist from "../assets/dudeMachinist.png";
+import man_giving_meetings from "../assets/man_giving_meetings.webp";
+import marine from "../assets/marine.webp";
+import machinist from "../assets/machinist.webp";
 import { FormattedMessage } from "react-intl";
 import { JSX } from "react";
 
@@ -90,15 +90,15 @@ const About = () => {
       <Heading />
       <Box sx={{ display: "flex" }}>
         <Description description={SOFTWARE_DESCRIPTION} />
-        <Picture src={dudeGivingMeetings} />
+        <Picture src={man_giving_meetings} />
       </Box>
       <Box sx={{ display: "flex" }}>
-        <Picture src={dudeMachinist} />
+        <Picture src={machinist} />
         <Description description={MACHINIST_DESCRIPTION} />
       </Box>
       <Box sx={{ display: "flex" }}>
         <Description description={MILITARY_DESCRIPTION} />
-        <Picture src={dudeMarine} />
+        <Picture src={marine} />
       </Box>
     </Box>
   );

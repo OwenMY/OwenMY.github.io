@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import thumbsUpGuy from "../assets/thumbsUpGuy.png";
+import thumbsUpGuy from "../assets/thumbsUpGuy.webp";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { FormattedMessage } from "react-intl";
