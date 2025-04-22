@@ -1,0 +1,9 @@
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))u(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const i of r.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&u(i)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function u(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();var d={exports:{}},n={};/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var c;function m(){if(c)return n;c=1;var t=Symbol.for("react.transitional.element"),o=Symbol.for("react.fragment");function s(u,e,r){var i=null;if(r!==void 0&&(i=""+r),e.key!==void 0&&(i=""+e.key),"key"in e){r={};for(var a in e)a!=="key"&&(r[a]=e[a])}else r=e;return e=r.ref,{$$typeof:t,type:u,key:i,ref:e!==void 0?e:null,props:r}}return n.Fragment=o,n.jsx=s,n.jsxs=s,n}var f;function v(){return f||(f=1,d.exports=m()),d.exports}var l=v(),x=require("react"),h=require("react-dom/client"),R=p(require("./App.js")),_=p(require("@mui/material/CssBaseline")),q=require("@mui/material/styles"),E=require("./theme.js");function p(t){return t&&t.__esModule?t:{default:t}}(0,h.createRoot)(document.getElementById("root")).render(l.jsx(x.StrictMode,{children:l.jsxs(q.ThemeProvider,{theme:E.darkTheme,disableTransitionOnChange:!0,children:[l.jsx(_.default,{}),l.jsx(R.default,{})]})}));
