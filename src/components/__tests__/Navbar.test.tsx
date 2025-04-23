@@ -1,0 +1,50 @@
+import userEvent from "@testing-library/user-event";
+import { screen, render } from "@testing-library/react";
+import Navbar from "../Navbar";
+import { IntlProvider } from "react-intl";
+import { prettyDOM } from "@testing-library/react";
+const handleLangChange = jest.fn();
+
+const renderNavbar = () => {
+  render(
+    <IntlProvider locale="en">
+      <Navbar handleLangChange={handleLangChange} />
+    </IntlProvider>,
+  );
+};
+
+const appendFakeSection = (name: string, mockFn: jest.Mock<any, any, any>) => {
+  const section = document.createElement("div");
+  section.setAttribute("id", name);
+  section.scrollIntoView = mockFn;
+
+  document.body.appendChild(section);
+};
+
+describe("Navbar", () => {
+  beforeEach(() => {
+    handleLangChange.mockReset();
+  });
+
+  it("renders the logo", () => {
+    renderNavbar();
+    const logo = screen.getByText("Owen Yoshishige");
+    expect(logo).toBeVisible();
+  });
+
+  it.each(["Home", "About", "Portfolio", "Contact"])(
+    "scrolls to %s section when clicking on its nav button",
+    async (section) => {
+      userEvent.setup();
+      renderNavbar();
+
+      const button = screen.getByText(section);
+
+      const scrollIntoViewMock = jest.fn();
+      appendFakeSection(section, scrollIntoViewMock);
+
+      await userEvent.click(button);
+      expect(scrollIntoViewMock).toHaveBeenCalled();
+    },
+  );
+});
