@@ -4,14 +4,14 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import TranslateIcon from "@mui/icons-material/Translate";
 
-const languageOptions = [
+const LANGUAGE_OPTIONS = [
   "English",
   "日本語", // Japanese
   "中文", // Chinese
   "Espaniol",
 ];
 
-const languageCodes = {
+const LANGUAGE_CODES = {
   English: "en",
   日本語: "ja", // Japanese
   中文: "zh", // Chinese
@@ -38,8 +38,8 @@ const LanguageButton = ({ handleLangChange }: LanguageButtonProps) => {
   const handleMenuItemClick = (_: MouseEvent<HTMLElement>, index: number) => {
     setAnchorEl(null);
     setSelectedIndex(index);
-    const selectedLanguage = languageOptions[index];
-    const selectLocale = languageCodes[selectedLanguage];
+    const selectedLanguage = LANGUAGE_OPTIONS[index];
+    const selectLocale = LANGUAGE_CODES[selectedLanguage];
     handleLangChange(selectLocale);
   };
 
@@ -47,6 +47,7 @@ const LanguageButton = ({ handleLangChange }: LanguageButtonProps) => {
     <div>
       <Button
         id="basic-button"
+        aria-label="language button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
@@ -63,7 +64,7 @@ const LanguageButton = ({ handleLangChange }: LanguageButtonProps) => {
           "aria-labelledby": "basic-button",
         }}
       >
-        {languageOptions.map((option, index) => (
+        {LANGUAGE_OPTIONS.map((option, index) => (
           <MenuItem
             key={option}
             selected={index === selectedIndex}

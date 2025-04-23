@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import { screen, render } from "@testing-library/react";
 import Navbar from "../Navbar";
 import { IntlProvider } from "react-intl";
-import { prettyDOM } from "@testing-library/react";
+
 const handleLangChange = jest.fn();
 
 const renderNavbar = () => {
@@ -20,6 +20,13 @@ const appendFakeSection = (name: string, mockFn: jest.Mock<any, any, any>) => {
 
   document.body.appendChild(section);
 };
+
+const LANGUAGE_OPTIONS = [
+  "English",
+  "日本語", // Japanese
+  "中文", // Chinese
+  "Espaniol",
+];
 
 describe("Navbar", () => {
   beforeEach(() => {
@@ -45,6 +52,22 @@ describe("Navbar", () => {
 
       await userEvent.click(button);
       expect(scrollIntoViewMock).toHaveBeenCalled();
+    },
+  );
+
+  it.each(LANGUAGE_OPTIONS)(
+    "can change the page language to %s",
+    async (langauge) => {
+      userEvent.setup();
+      renderNavbar();
+
+      const menuButton = screen.getByLabelText("language button");
+      await userEvent.click(menuButton);
+
+      const langaugeOption = screen.getByText(langauge);
+      await userEvent.click(langaugeOption);
+
+      expect(handleLangChange).toHaveBeenCalledTimes(1);
     },
   );
 });

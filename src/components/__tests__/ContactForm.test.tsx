@@ -89,9 +89,9 @@ describe("ContactForm", () => {
     userEvent.setup();
     renderContactForm();
 
-    await typeIntoFormInput(FIRSTNAME_INPUT_LABEL, "Rob");
-    await typeIntoFormInput(LASTNAME_INPUT_LABEL, "Roblaw");
-    await typeIntoFormInput(MESSAGE_TEXTBOX_LABEL, "Hey nice website man!");
+    await typeIntoFormInput(FIRSTNAME_INPUT_LABEL, "mojo");
+    await typeIntoFormInput(LASTNAME_INPUT_LABEL, "jojo");
+    await typeIntoFormInput(MESSAGE_TEXTBOX_LABEL, "Muahahaha!");
 
     // Invalid Email
     await typeIntoFormInput(EMAIL_INPUT_LABEL, "mojojojo");
