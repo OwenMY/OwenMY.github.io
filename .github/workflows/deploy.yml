@@ -21,6 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check styling via prettier
+        run: npm run format:check
+
+      - name: Unit Testing
+        run: npm run test
+
       - name: Build the Vite app
         run: npm run build
 
