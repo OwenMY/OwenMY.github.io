@@ -13,6 +13,7 @@ const renderNavbar = () => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const appendFakeSection = (name: string, mockFn: jest.Mock<any, any, any>) => {
   const section = document.createElement("div");
   section.setAttribute("id", name);
@@ -51,7 +52,7 @@ describe("Navbar", () => {
       appendFakeSection(section, scrollIntoViewMock);
 
       await userEvent.click(button);
-      expect(scrollIntoViewMock).toHaveBeenCalled();
+      expect(scrollIntoViewMock).toHaveBeenCalledTimes(1);
     },
   );
 

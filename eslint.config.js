@@ -4,6 +4,7 @@ import globals from "globals";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import typescriptEslint from "@typescript-eslint/parser";
 
 export default [
   ...tseslint.configs.recommended,
@@ -12,12 +13,13 @@ export default [
     files: ["**/*.{ts,tsx, jsx}"],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: { ...globals.browser, ...globals.jest },
       parserOptions: {
         ecmaVersion: "latest",
         ecmaFeatures: { jsx: true },
         sourceType: "module",
         project: ["./tsconfig.json"],
+        parser: typescriptEslint,
       },
     },
     settings: { react: { version: "18.3" } },
@@ -42,9 +44,6 @@ export default [
         "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
-    },
-    env: {
-      jest: true,
     },
   },
 ];
