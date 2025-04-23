@@ -114,7 +114,6 @@ const HeroImage = () => (
     <Box sx={{ width: "25rem", margin: "auto" }}>
       <img
         src={hero}
-        loading="eager"
         style={{ width: "100%", height: "auto", borderRadius: "50%" }}
       />
     </Box>
