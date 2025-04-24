@@ -3,6 +3,7 @@ import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
 import infinite_skills from "../assets/skills.webp";
 import { memo } from "react";
+import { useIntl } from "react-intl";
 
 const Heading = () => (
   <Box>
@@ -63,10 +64,20 @@ const ListOfSkills = () => (
 );
 
 const SkillsPicture = memo(function SkillsPicture() {
+  const intl = useIntl();
+
   return (
     <Box sx={{ width: "50%", "@media (max-width:850px)": { display: "none" } }}>
       <Box sx={{ width: "20rem", margin: "auto" }}>
-        <img src={infinite_skills} style={{ width: "100%", height: "auto" }} />
+        <img
+          alt={intl.formatMessage({
+            id: "skills.image.alt.text",
+            defaultMessage: "Man displaying skills",
+            description: "Alt text for an image of a man showing skills",
+          })}
+          src={infinite_skills}
+          style={{ width: "100%", height: "auto" }}
+        />
       </Box>
     </Box>
   );
