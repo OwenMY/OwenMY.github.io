@@ -29,7 +29,7 @@ import {
   QUESTIONS_AND_ANSWERS_TITLE,
 } from "../constants/projects";
 import Chip from "@mui/material/Chip";
-import { JSX } from "react";
+import { JSX, memo } from "react";
 
 const Heading = () => (
   <Box sx={{ margin: "auto", paddingBottom: "2rem" }}>
@@ -58,74 +58,76 @@ interface ProjectProps {
   deployed_link?: string;
 }
 
-const Project = ({
+const Project = memo(function Project({
   title,
   description,
   picture,
   github_link,
   deployed_link,
   skills,
-}: ProjectProps) => (
-  <Card
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      width: "19rem",
-      height: "30rem",
-      borderRadius: "1rem",
-      "@media (max-width:850px)": {
-        margin: "auto",
-        width: "100%",
-      },
-    }}
-  >
-    <CardContent
+}: ProjectProps) {
+  return (
+    <Card
       sx={{
         display: "flex",
-        height: "35rem",
         flexDirection: "column",
         justifyContent: "space-between",
-        paddingBottom: "0",
+        width: "19rem",
+        height: "30rem",
+        borderRadius: "1rem",
+        "@media (max-width:850px)": {
+          margin: "auto",
+          width: "100%",
+        },
       }}
     >
-      <Box>
-        <Picture src={picture} />
-        <Typography variant="h6" component="h6">
-          {title}
-        </Typography>
-        <Typography variant="body2">{description}</Typography>
-      </Box>
-      <Box
+      <CardContent
         sx={{
           display: "flex",
-          gap: "0.5rem",
-          flexWrap: "wrap",
-          alignSelf: "flex-start",
+          height: "35rem",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          paddingBottom: "0",
         }}
       >
-        {skills.map((skill) => (
-          <Chip key={skill} label={skill} />
-        ))}
-      </Box>
-    </CardContent>
-    <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-      <Link
-        color="textPrimary"
-        href={github_link}
-        target="_blank"
-        sx={{ padding: "0.5rem" }}
-      >
-        <GitHubIcon />
-      </Link>
-      {deployed_link && (
-        <Link href={deployed_link} target="_blank" sx={{ padding: "0.5rem" }}>
-          SEE LIVE
+        <Box>
+          <Picture src={picture} />
+          <Typography variant="h6" component="h6">
+            {title}
+          </Typography>
+          <Typography variant="body2">{description}</Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            gap: "0.5rem",
+            flexWrap: "wrap",
+            alignSelf: "flex-start",
+          }}
+        >
+          {skills.map((skill) => (
+            <Chip key={skill} label={skill} />
+          ))}
+        </Box>
+      </CardContent>
+      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Link
+          color="textPrimary"
+          href={github_link}
+          target="_blank"
+          sx={{ padding: "0.5rem" }}
+        >
+          <GitHubIcon />
         </Link>
-      )}
-    </CardActions>
-  </Card>
-);
+        {deployed_link && (
+          <Link href={deployed_link} target="_blank" sx={{ padding: "0.5rem" }}>
+            SEE LIVE
+          </Link>
+        )}
+      </CardActions>
+    </Card>
+  );
+});
 
 const Portfolio = () => {
   return (

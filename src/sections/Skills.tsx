@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
 import infinite_skills from "../assets/skills.webp";
+import { memo } from "react";
 
 const Heading = () => (
   <Box>
@@ -61,13 +62,15 @@ const ListOfSkills = () => (
   </Box>
 );
 
-const SkillsPicture = () => (
-  <Box sx={{ width: "50%", "@media (max-width:850px)": { display: "none" } }}>
-    <Box sx={{ width: "20rem", margin: "auto" }}>
-      <img src={infinite_skills} style={{ width: "100%", height: "auto" }} />
+const SkillsPicture = memo(function SkillsPicture() {
+  return (
+    <Box sx={{ width: "50%", "@media (max-width:850px)": { display: "none" } }}>
+      <Box sx={{ width: "20rem", margin: "auto" }}>
+        <img src={infinite_skills} style={{ width: "100%", height: "auto" }} />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+});
 
 const Skills = () => {
   return (

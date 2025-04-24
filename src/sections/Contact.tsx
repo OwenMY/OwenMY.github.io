@@ -5,6 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { FormattedMessage } from "react-intl";
 import { ContactForm } from "../components/ContactForm";
+import { memo } from "react";
 
 const Heading = () => (
   <Box sx={{ width: "100%%", margin: "auto" }}>
@@ -18,20 +19,22 @@ const Heading = () => (
   </Box>
 );
 
-const Picture = () => (
-  <Box
-    sx={{
-      width: "50%",
-      margin: "auto",
-      padding: "1rem",
-      "@media (max-width:850px)": { display: "none" },
-    }}
-  >
-    <Box sx={{ width: "10rem", margin: "auto" }}>
-      <img src={thumbsUpGuy} style={{ width: "100%", height: "auto" }} />
+const Picture = memo(function Picture() {
+  return (
+    <Box
+      sx={{
+        width: "50%",
+        margin: "auto",
+        padding: "1rem",
+        "@media (max-width:850px)": { display: "none" },
+      }}
+    >
+      <Box sx={{ width: "10rem", margin: "auto" }}>
+        <img src={thumbsUpGuy} style={{ width: "100%", height: "auto" }} />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+});
 
 const CallToAction = () => (
   <Card sx={{ borderRadius: "1rem" }}>

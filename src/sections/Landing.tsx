@@ -8,6 +8,7 @@ import Resume from "../assets/Resume.pdf";
 import Typography from "@mui/material/Typography";
 import hero from "../assets/hero.webp";
 import { FormattedMessage } from "react-intl";
+import { memo } from "react";
 
 const Resources = () => (
   <Box sx={{ display: "flex", gap: "0.5rem", marginTop: "1rem" }}>
@@ -103,22 +104,24 @@ const Description = () => (
   </Box>
 );
 
-const HeroImage = () => (
-  <Box
-    sx={{
-      width: "50%",
-      margin: "auto",
-      "@media (max-width:850px)": { display: "none" },
-    }}
-  >
-    <Box sx={{ width: "25rem", margin: "auto" }}>
-      <img
-        src={hero}
-        style={{ width: "100%", height: "auto", borderRadius: "50%" }}
-      />
+const HeroImage = memo(function HeroImage() {
+  return (
+    <Box
+      sx={{
+        width: "50%",
+        margin: "auto",
+        "@media (max-width:850px)": { display: "none" },
+      }}
+    >
+      <Box sx={{ width: "25rem", margin: "auto" }}>
+        <img
+          src={hero}
+          style={{ width: "100%", height: "auto", borderRadius: "50%" }}
+        />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+});
 
 const Landing = () => (
   <Box

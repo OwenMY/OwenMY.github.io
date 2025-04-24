@@ -4,7 +4,7 @@ import man_giving_meetings from "../assets/man_giving_meetings.webp";
 import marine from "../assets/marine.webp";
 import machinist from "../assets/machinist.webp";
 import { FormattedMessage } from "react-intl";
-import { JSX } from "react";
+import { JSX, memo } from "react";
 
 const Heading = () => (
   <Box>
@@ -54,19 +54,21 @@ const Description = ({ description }: { description: JSX.Element }) => (
   </Box>
 );
 
-const Picture = ({ src }: { src: string }) => (
-  <Box
-    sx={{
-      width: "50%",
-      margin: "0 auto",
-      "@media (max-width:850px)": { display: "none" },
-    }}
-  >
-    <Box sx={{ width: "20rem", margin: "auto" }}>
-      <img src={src} style={{ width: "100%", height: "auto" }} />
+const Picture = memo(function Picture({ src }: { src: string }) {
+  return (
+    <Box
+      sx={{
+        width: "50%",
+        margin: "0 auto",
+        "@media (max-width:850px)": { display: "none" },
+      }}
+    >
+      <Box sx={{ width: "20rem", margin: "auto" }}>
+        <img src={src} style={{ width: "100%", height: "auto" }} />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+});
 
 const About = () => {
   return (
