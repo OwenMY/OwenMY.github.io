@@ -1,15 +1,10 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import GYMX5000_PIX from "../assets/GymX5000.webp";
 import QUESTIONS_AND_ANSWERS_PIC from "../assets/API.webp";
 import ATELIER_PIC from "../assets/Atelier.webp";
 import AZ_TRAFFIC_MAPS_PIC from "../assets/AZTM.webp";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import Link from "@mui/material/Link";
 import {
   AZ_TRAFFIC_MAPS_DESCRIPTION,
   AZ_TRAFFIC_MAPS_URL,
@@ -28,8 +23,7 @@ import {
   ATELIER_TITLE,
   QUESTIONS_AND_ANSWERS_TITLE,
 } from "../constants/projects";
-import Chip from "@mui/material/Chip";
-import { JSX, memo } from "react";
+import { Project } from "../components/Project";
 
 const Heading = () => (
   <Box sx={{ margin: "auto", paddingBottom: "2rem" }}>
@@ -43,93 +37,9 @@ const Heading = () => (
   </Box>
 );
 
-const Picture = ({ src }: { src: string }) => (
-  <Box sx={{ width: "100%", margin: "auto" }}>
-    <img src={src} style={{ width: "100%" }} />
-  </Box>
-);
-
-interface ProjectProps {
-  title: JSX.Element;
-  description: JSX.Element;
-  picture: string;
-  github_link: string;
-  skills: string[];
-  deployed_link?: string;
-}
-
-const Project = memo(function Project({
-  title,
-  description,
-  picture,
-  github_link,
-  deployed_link,
-  skills,
-}: ProjectProps) {
-  return (
-    <Card
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        width: "19rem",
-        height: "30rem",
-        borderRadius: "1rem",
-        "@media (max-width:850px)": {
-          margin: "auto",
-          width: "100%",
-        },
-      }}
-    >
-      <CardContent
-        sx={{
-          display: "flex",
-          height: "35rem",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          paddingBottom: "0",
-        }}
-      >
-        <Box>
-          <Picture src={picture} />
-          <Typography variant="h6" component="h6">
-            {title}
-          </Typography>
-          <Typography variant="body2">{description}</Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            gap: "0.5rem",
-            flexWrap: "wrap",
-            alignSelf: "flex-start",
-          }}
-        >
-          {skills.map((skill) => (
-            <Chip key={skill} label={skill} />
-          ))}
-        </Box>
-      </CardContent>
-      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Link
-          color="textPrimary"
-          href={github_link}
-          target="_blank"
-          sx={{ padding: "0.5rem" }}
-        >
-          <GitHubIcon />
-        </Link>
-        {deployed_link && (
-          <Link href={deployed_link} target="_blank" sx={{ padding: "0.5rem" }}>
-            SEE LIVE
-          </Link>
-        )}
-      </CardActions>
-    </Card>
-  );
-});
-
 const Portfolio = () => {
+  const intl = useIntl();
+
   return (
     <Box
       id="Portfolio"
@@ -154,6 +64,11 @@ const Portfolio = () => {
           picture={AZ_TRAFFIC_MAPS_PIC}
           github_link={AZ_TRAFFIC_MAPS_URL}
           skills={AZ_TRAFFIC_MAPS_SKILLS}
+          alt_text={intl.formatMessage({
+            id: "project.aztm.alt.text",
+            defaultMessage: "Arizona Traffic Maps",
+            description: "Alt text describing the Arizona Traffic Maps image",
+          })}
         />
         <Project
           title={GYMX_5000_TITLE}
@@ -161,6 +76,11 @@ const Portfolio = () => {
           picture={GYMX5000_PIX}
           github_link={GYMX5000_URL}
           skills={GYMX5000_SKILLS}
+          alt_text={intl.formatMessage({
+            id: "project.gymx5000.alt.text",
+            defaultMessage: "Gym X 5000",
+            description: "Alt text describing the Gym X 5000 image",
+          })}
         />
         <Project
           title={ATELIER_TITLE}
@@ -168,6 +88,11 @@ const Portfolio = () => {
           picture={ATELIER_PIC}
           github_link={ATELIER_URL}
           skills={ATELIER_SKILLS}
+          alt_text={intl.formatMessage({
+            id: "project.atelier.alt.text",
+            defaultMessage: "Atelier",
+            description: "Alt text describing the Atelier image",
+          })}
         />
         <Project
           title={QUESTIONS_AND_ANSWERS_TITLE}
@@ -175,6 +100,11 @@ const Portfolio = () => {
           picture={QUESTIONS_AND_ANSWERS_PIC}
           github_link={QUESTIONS_AND_ANSWERS_URL}
           skills={QUESTIONS_AND_ANSWERS_SKILLS}
+          alt_text={intl.formatMessage({
+            id: "project.questions_and_answers.alt.text",
+            defaultMessage: "Questions and Answers",
+            description: "Alt text describing the Questions and Answers image",
+          })}
         />
       </Box>
     </Box>
