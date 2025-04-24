@@ -10,7 +10,7 @@ const config: Config = {
   verbose: true,
   watchPathIgnorePatterns: ["<rootDir>/dist/"],
   moduleNameMapper: {
-    "\\.(jpg|jpeg|png|gif|webp|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(jpg|jpeg|png|gif|webp|svg|pdf)$": "<rootDir>/__mocks__/fileMock.js",
   },
 };
 

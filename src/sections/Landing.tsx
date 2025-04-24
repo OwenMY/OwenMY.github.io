@@ -7,13 +7,14 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Resume from "../assets/Resume.pdf";
 import Typography from "@mui/material/Typography";
 import hero from "../assets/hero.webp";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { memo } from "react";
 
 const Resources = () => (
   <Box sx={{ display: "flex", gap: "0.5rem", marginTop: "1rem" }}>
     <Button variant="outlined">
       <Link
+        aria-label="Link to Owen's resume"
         href={Resume}
         target="_blank"
         underline="none"
@@ -30,6 +31,7 @@ const Resources = () => (
     </Button>
     <Button variant="outlined">
       <Link
+        aria-label="Link to Owen's Github"
         href="https://github.com/OwenMY"
         target="_blank"
         underline="none"
@@ -41,6 +43,7 @@ const Resources = () => (
     </Button>
     <Button variant="outlined">
       <Link
+        aria-label="Link to Owen's LinkedIn"
         href="https://www.linkedin.com/in/owenyoshishige/"
         target="_blank"
         underline="none"
@@ -105,6 +108,8 @@ const Description = () => (
 );
 
 const HeroImage = memo(function HeroImage() {
+  const intl = useIntl();
+
   return (
     <Box
       sx={{
@@ -115,6 +120,11 @@ const HeroImage = memo(function HeroImage() {
     >
       <Box sx={{ width: "25rem", margin: "auto" }}>
         <img
+          alt={intl.formatMessage({
+            id: "landing.hero_image.alt.text",
+            defaultMessage: "Man at a keyboard",
+            description: "Alt image text for hero image of a man at a keyboard",
+          })}
           src={hero}
           style={{ width: "100%", height: "auto", borderRadius: "50%" }}
         />
