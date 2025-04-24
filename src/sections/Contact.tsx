@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import thumbsUpGuy from "../assets/thumbsUpGuy.webp";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { ContactForm } from "../components/ContactForm";
 import { memo } from "react";
 
@@ -20,6 +20,8 @@ const Heading = () => (
 );
 
 const Picture = memo(function Picture() {
+  const intl = useIntl();
+
   return (
     <Box
       sx={{
@@ -30,7 +32,15 @@ const Picture = memo(function Picture() {
       }}
     >
       <Box sx={{ width: "10rem", margin: "auto" }}>
-        <img src={thumbsUpGuy} style={{ width: "100%", height: "auto" }} />
+        <img
+          src={thumbsUpGuy}
+          alt={intl.formatMessage({
+            id: "contact.description.image",
+            defaultMessage: "Man giving a thumbs up",
+            description: "Image alt text of a man giving a thumbs up",
+          })}
+          style={{ width: "100%", height: "auto" }}
+        />
       </Box>
     </Box>
   );
