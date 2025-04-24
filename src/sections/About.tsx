@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import man_giving_meetings from "../assets/man_giving_meetings.webp";
 import marine from "../assets/marine.webp";
 import machinist from "../assets/machinist.webp";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { JSX, memo } from "react";
 
 const Heading = () => (
@@ -54,7 +54,13 @@ const Description = ({ description }: { description: JSX.Element }) => (
   </Box>
 );
 
-const Picture = memo(function Picture({ src }: { src: string }) {
+const Picture = memo(function Picture({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) {
   return (
     <Box
       sx={{
@@ -64,13 +70,16 @@ const Picture = memo(function Picture({ src }: { src: string }) {
       }}
     >
       <Box sx={{ width: "20rem", margin: "auto" }}>
-        <img src={src} style={{ width: "100%", height: "auto" }} />
+        <img alt={alt} src={src} style={{ width: "100%", height: "auto" }} />
       </Box>
     </Box>
   );
 });
 
 const About = () => {
+  // alt attribute on img elements must use the intl hook due to its inability to accept elements as value
+  const intl = useIntl();
+
   return (
     <Box
       id="About"
@@ -92,15 +101,41 @@ const About = () => {
       <Heading />
       <Box sx={{ display: "flex" }}>
         <Description description={SOFTWARE_DESCRIPTION} />
-        <Picture src={man_giving_meetings} />
+        <Picture
+          src={man_giving_meetings}
+          alt={intl.formatMessage({
+            id: "about.image.giving_meetings.alt",
+            defaultMessage:
+              "man giving meeting at a white board with two people",
+            description:
+              "Alternate text for the cartoon image of a man giving meetings",
+          })}
+        />
       </Box>
       <Box sx={{ display: "flex" }}>
-        <Picture src={machinist} />
+        <Picture
+          src={machinist}
+          alt={intl.formatMessage({
+            id: "about.image.cnc.alt",
+            defaultMessage: "man operating cnc machine",
+            description:
+              "Alternate text for the cartoon image of a man at a cnc machine",
+          })}
+        />
         <Description description={MACHINIST_DESCRIPTION} />
       </Box>
       <Box sx={{ display: "flex" }}>
         <Description description={MILITARY_DESCRIPTION} />
-        <Picture src={marine} />
+        <Picture
+          src={marine}
+          alt={intl.formatMessage({
+            id: "about.image.military.alt",
+            defaultMessage:
+              "military man saluting with helicopter in background",
+            description:
+              "Alternate text for the cartoon image of a man saluting in front of a helicopter",
+          })}
+        />
       </Box>
     </Box>
   );
