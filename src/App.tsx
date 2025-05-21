@@ -4,7 +4,6 @@ import Landing from "./sections/Landing";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Portfolio from "./sections/Portfolio";
-import Contact from "./sections/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { IntlProvider } from "react-intl";
 import { useState } from "react";
@@ -35,7 +34,6 @@ function App() {
         <About />
         <Skills />
         <Portfolio />
-        <Contact />
         <ScrollToTopButton />
       </Box>
     </IntlProvider>

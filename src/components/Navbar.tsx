@@ -28,12 +28,6 @@ const sections = [
     defaultMessage="Portfolio"
     description="label for a portfolio section button"
   />,
-  <FormattedMessage
-    key="Contact"
-    id="navbar.contact.button.label"
-    defaultMessage="Contact"
-    description="label for a contact section button"
-  />,
 ];
 
 interface NavBarProps {
