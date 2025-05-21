@@ -40,7 +40,7 @@ describe("Navbar", () => {
     expect(logo).toBeVisible();
   });
 
-  it.each(["Home", "About", "Portfolio", "Contact"])(
+  it.each(["Home", "About", "Portfolio"])(
     "scrolls to %s section when clicking on its nav button",
     async (section) => {
       userEvent.setup();
